@@ -1,0 +1,18 @@
+{
+  "author": "Kirby Wu",
+  "name": "ldiconfont",
+  "license": "MIT",
+  "description": "iconfont dedicated for loading.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/loadingio/ldiconfont",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loadingio/ldiconfont"
+  },
+  "engines": {
+    "node": ">=0.12.6",
+    "npm": ">=1.2.2"
+  },
+  "devDependencies": {
+  }
+}
