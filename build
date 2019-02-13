@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 rm -rf dist/
 mkdir -p dist
-echo "copy style.css..."
+echo "copy files/style.css to dist/ldif.css..."
 cp files/style.css dist/ldif.css
+echo "Uglifying ldif.css..."
+uglifycss dist/ldif.css > dist/ldif.min.css
 echo "copy font files..."
 cp -R files/fonts dist/fonts
 echo "done."

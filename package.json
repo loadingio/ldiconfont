@@ -14,5 +14,6 @@
     "npm": ">=1.2.2"
   },
   "devDependencies": {
+    "uglifycss": "=0.0.29"
   }
 }
