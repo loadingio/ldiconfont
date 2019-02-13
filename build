@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+rm -rf dist/
+mkdir -p dist
+echo "copy style.css..."
+cp files/style.css dist/ldif.css
+echo "copy font files..."
+cp -R files/fonts dist/fonts
+echo "done."
+
