@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?qv4e8n') format('truetype'),
-    url('fonts/ldi.woff?qv4e8n') format('woff'),
-    url('fonts/ldi.svg?qv4e8n#ldi') format('svg');
+    url('fonts/ldi.ttf?xi82dv') format('truetype'),
+    url('fonts/ldi.woff?xi82dv') format('woff'),
+    url('fonts/ldi.svg?xi82dv#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,6 +28,9 @@ i {
 }
 .i-chevron-down:before {
   content: "\e903";
+}
+.i-undo:before {
+  content: "\e905";
 }
 .i-mail:before {
   content: "\e900";
