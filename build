@@ -3,6 +3,8 @@ rm -rf dist/
 mkdir -p dist
 echo "copy files/style.css to dist/ldif.css..."
 cp files/style.css dist/ldif.css
+echo "build src/base.styl ->> dist/ldif.css ..."
+./node_modules/.bin/stylus -p src/base.styl >> dist/ldif.css
 echo "Uglifying ldif.css..."
 uglifycss dist/ldif.css > dist/ldif.min.css
 echo "copy font files..."
