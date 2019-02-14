@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?z9xx0s') format('truetype'),
-    url('fonts/ldi.woff?z9xx0s') format('woff'),
-    url('fonts/ldi.svg?z9xx0s#ldi') format('svg');
+    url('fonts/ldi.ttf?qv4e8n') format('truetype'),
+    url('fonts/ldi.woff?qv4e8n') format('woff'),
+    url('fonts/ldi.svg?qv4e8n#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,9 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-close:before {
+  content: "\e904";
+}
 .i-chevron-down:before {
   content: "\e903";
 }

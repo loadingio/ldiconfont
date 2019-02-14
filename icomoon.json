@@ -10,10 +10,150 @@
         {
           "order": 1,
           "id": 0,
+          "name": "close",
+          "prevSize": 32,
+          "code": 59652,
+          "tempChar": ""
+        }
+      ],
+      "id": 7,
+      "metadata": {
+        "name": "Brankic 1979 (subset)",
+        "url": "http://brankic1979.com/icons/",
+        "designer": "Brankic1979",
+        "designerURL": "http://www.brankic1979.com/",
+        "license": "Custom",
+        "licenseURL": "http://brankic1979.com/icons/",
+        "iconsHash": 1724841611,
+        "importSize": {
+          "width": 32,
+          "height": 32
+        }
+      },
+      "height": 1024,
+      "prevSize": 32,
+      "icons": [
+        {
+          "id": 0,
+          "paths": [
+            "M626.784 512.032l195.072 195.072c12.672 12.672 12.672 33.248 0 45.92l-68.832 68.832c-12.672 12.672-33.216 12.672-45.92 0l-195.104-195.072-195.104 195.072c-12.672 12.672-33.216 12.672-45.888 0l-68.864-68.832c-12.672-12.672-12.672-33.216 0-45.92l195.104-195.072-195.104-195.104c-12.672-12.672-12.672-33.248 0-45.92l68.896-68.832c12.672-12.672 33.216-12.672 45.888 0l195.072 195.104 195.104-195.104c12.672-12.672 33.216-12.672 45.92 0l68.832 68.864c12.672 12.672 12.672 33.216 0 45.92l-195.072 195.072z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "cancel",
+            "close",
+            "remove",
+            "dismiss"
+          ],
+          "grid": 32
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    },
+    {
+      "selection": [
+        {
+          "order": 0,
+          "id": 0,
+          "name": "cross"
+        }
+      ],
+      "id": 6,
+      "metadata": {
+        "name": "Entypo+ (subset)",
+        "importSize": {
+          "width": 20,
+          "height": 20
+        },
+        "url": "http://www.entypo.com/",
+        "designerURL": "http://www.danielbruce.se/",
+        "designer": "Daniel Bruce",
+        "license": "CC BY-SA 4.0",
+        "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "iconsHash": -340016579
+      },
+      "height": 1024,
+      "prevSize": 20,
+      "icons": [
+        {
+          "id": 0,
+          "paths": [
+            "M734.618 760.269c-24.013 24.013-62.925 24.013-86.886 0l-135.731-155.136-135.731 155.085c-24.013 24.013-62.925 24.013-86.886 0-24.013-24.013-24.013-62.925 0-86.886l141.21-161.28-141.261-161.382c-24.013-24.013-24.013-62.874 0-86.886s62.874-24.013 86.886 0l135.782 155.187 135.731-155.187c24.013-24.013 62.874-24.013 86.886 0s24.013 62.925 0 86.886l-141.21 161.382 141.21 161.28c24.013 24.013 24.013 62.925 0 86.938z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "cross"
+          ],
+          "grid": 20
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    },
+    {
+      "selection": [
+        {
+          "order": 0,
+          "id": 0,
+          "name": "cancel, close, dismiss"
+        }
+      ],
+      "id": 5,
+      "metadata": {
+        "name": "Broccolidry (subset)",
+        "url": "http://dribbble.com/shots/587469-Free-16px-Broccolidryiconsaniconsetitisfullof-icons",
+        "designer": "Visual Idiot",
+        "designerURL": "http://idiot.vc/",
+        "license": "Custom",
+        "licenseURL": "http://licence.visualidiot.com/",
+        "iconsHash": 1204378869,
+        "importSize": {
+          "width": 32,
+          "height": 32
+        }
+      },
+      "height": 1024,
+      "prevSize": 32,
+      "icons": [
+        {
+          "id": 0,
+          "paths": [
+            "M983.072 216.768l-294.304 296.096 294.304 294.336c12.32 12.288 12.32 32.224 0 44.544l-133.632 133.6c-12.256 12.32-32.192 12.32-44.512 0l-293.824-293.824-292.064 293.824c-12.288 12.32-32.224 12.32-44.544 0l-133.6-133.6c-12.288-12.32-12.288-32.256 0-44.544l292.064-293.824-292.032-292.032c-12.288-12.288-12.288-32.224 0-44.544l133.6-133.6c12.288-12.32 32.224-12.32 44.544 0l291.52 291.52 294.368-296.096c12.32-12.32 32.256-12.32 44.512 0l133.632 133.6c12.256 12.32 12.256 32.256-0.032 44.544z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "cancel",
+            "close",
+            "dismiss"
+          ],
+          "grid": 16
+        }
+      ],
+      "invisible": false,
+      "colorThemes": []
+    },
+    {
+      "selection": [
+        {
+          "order": 1,
+          "id": 0,
           "name": "chevron-down",
           "prevSize": 24,
           "code": 59651,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 4,
@@ -62,7 +202,7 @@
           "name": "mail",
           "prevSize": 28,
           "code": 59648,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -70,7 +210,7 @@
           "name": "pencil",
           "prevSize": 28,
           "code": 59649,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -78,7 +218,7 @@
           "name": "cog",
           "prevSize": 28,
           "code": 59650,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 3,
@@ -584,7 +724,7 @@
           "id": 64,
           "prevSize": 32,
           "code": 59711,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "calculator, compute",
@@ -605,7 +745,7 @@
           "id": 67,
           "prevSize": 32,
           "code": 59714,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "phone-hang-up, telephone2",
@@ -638,7 +778,7 @@
           "id": 72,
           "prevSize": 32,
           "code": 59719,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "location2, map-marker2",
@@ -1847,7 +1987,7 @@
           "id": 273,
           "prevSize": 32,
           "code": 59920,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark2, tick2",
