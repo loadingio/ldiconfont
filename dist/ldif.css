@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?ykyl54') format('truetype'),
-    url('fonts/ldi.woff?ykyl54') format('woff'),
-    url('fonts/ldi.svg?ykyl54#ldi') format('svg');
+    url('fonts/ldi.ttf?ib6c5d') format('truetype'),
+    url('fonts/ldi.woff?ib6c5d') format('woff'),
+    url('fonts/ldi.svg?ib6c5d#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,11 +23,8 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-drag:before {
-  content: "\e90a";
-}
-.i-close:before {
-  content: "\e904";
+.i-heart:before {
+  content: "\e914";
 }
 .i-chevron-up:before {
   content: "\e90c";
@@ -52,6 +49,24 @@ i {
 }
 .i-chevron-down:before {
   content: "\e903";
+}
+.i-drag:before {
+  content: "\e90a";
+}
+.i-close:before {
+  content: "\e904";
+}
+.i-building:before {
+  content: "\e915";
+}
+.i-legal:before {
+  content: "\e916";
+}
+.i-eye:before {
+  content: "\e917";
+}
+.i-github:before {
+  content: "\e918";
 }
 .i-question-o:before {
   content: "\e913";
