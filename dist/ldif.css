@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?5jhc5s') format('truetype'),
-    url('fonts/ldi.woff?5jhc5s') format('woff'),
-    url('fonts/ldi.svg?5jhc5s#ldi') format('svg');
+    url('fonts/ldi.ttf?xhth3y') format('truetype'),
+    url('fonts/ldi.woff?xhth3y') format('woff'),
+    url('fonts/ldi.svg?xhth3y#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -52,6 +52,9 @@ i {
 }
 .i-chevron-down:before {
   content: "\e903";
+}
+.i-question-circle-o:before {
+  content: "\e913";
 }
 .i-circle:before {
   content: "\26ac";
