@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?hqqhj9') format('truetype'),
-    url('fonts/ldi.woff?hqqhj9') format('woff'),
-    url('fonts/ldi.svg?hqqhj9#ldi') format('svg');
+    url('fonts/ldi.ttf?45aqic') format('truetype'),
+    url('fonts/ldi.woff?45aqic') format('woff'),
+    url('fonts/ldi.svg?45aqic#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,9 @@ i {
 }
 .i-chevron-down:before {
   content: "\e903";
+}
+.i-circle:before {
+  content: "\e90c";
 }
 .i-lock:before {
   content: "\e90b";

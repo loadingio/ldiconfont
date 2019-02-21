@@ -255,11 +255,19 @@
       "selection": [
         {
           "order": 1,
+          "id": 11,
+          "name": "circle",
+          "prevSize": 28,
+          "code": 59660,
+          "tempChar": ""
+        },
+        {
+          "order": 1,
           "id": 10,
           "prevSize": 28,
           "code": 59659,
           "name": "lock",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -283,7 +291,7 @@
           "name": "twt",
           "prevSize": 28,
           "code": 59656,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -291,7 +299,7 @@
           "name": "fb",
           "prevSize": 28,
           "code": 59657,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -299,7 +307,7 @@
           "name": "clone",
           "prevSize": 28,
           "code": 59654,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -307,7 +315,7 @@
           "name": "bars",
           "prevSize": 28,
           "code": 59655,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -315,7 +323,7 @@
           "name": "undo",
           "prevSize": 28,
           "code": 59653,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -323,7 +331,7 @@
           "name": "mail",
           "prevSize": 28,
           "code": 59648,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -331,7 +339,7 @@
           "name": "pencil",
           "prevSize": 28,
           "code": 59649,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -339,7 +347,7 @@
           "name": "cog",
           "prevSize": 28,
           "code": 59650,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 3,
@@ -352,13 +360,29 @@
         "licenseURL": "https://github.com/FortAwesome/Font-Awesome#license",
         "iconsHash": 309851062,
         "importSize": {
-          "width": 18,
+          "width": 24,
           "height": 28
         }
       },
       "height": 1024,
       "prevSize": 28,
       "icons": [
+        {
+          "id": 11,
+          "paths": [
+            "M438.857 146.286c-201.714 0-365.714 164-365.714 365.714s164 365.714 365.714 365.714 365.714-164 365.714-365.714-164-365.714-365.714-365.714zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857v0c242.286 0 438.857 196.571 438.857 438.857z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 878,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "circle-thin"
+          ],
+          "grid": 14
+        },
         {
           "id": 10,
           "paths": [
@@ -974,7 +998,7 @@
           "id": 64,
           "prevSize": 32,
           "code": 59711,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "calculator, compute",
@@ -995,7 +1019,7 @@
           "id": 67,
           "prevSize": 32,
           "code": 59714,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "phone-hang-up, telephone2",
@@ -1028,7 +1052,7 @@
           "id": 72,
           "prevSize": 32,
           "code": 59719,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "location2, map-marker2",
@@ -2237,7 +2261,7 @@
           "id": 273,
           "prevSize": 32,
           "code": 10003,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark2, tick2",
