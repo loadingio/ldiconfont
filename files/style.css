@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?45aqic') format('truetype'),
-    url('fonts/ldi.woff?45aqic') format('woff'),
-    url('fonts/ldi.svg?45aqic#ldi') format('svg');
+    url('fonts/ldi.ttf?xh2pbm') format('truetype'),
+    url('fonts/ldi.woff?xh2pbm') format('woff'),
+    url('fonts/ldi.svg?xh2pbm#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,7 +33,7 @@ i {
   content: "\e903";
 }
 .i-circle:before {
-  content: "\e90c";
+  content: "\26ac";
 }
 .i-lock:before {
   content: "\e90b";
