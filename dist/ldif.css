@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?ib6c5d') format('truetype'),
-    url('fonts/ldi.woff?ib6c5d') format('woff'),
-    url('fonts/ldi.svg?ib6c5d#ldi') format('svg');
+    url('fonts/ldi.ttf?jyvdne') format('truetype'),
+    url('fonts/ldi.woff?jyvdne') format('woff'),
+    url('fonts/ldi.svg?jyvdne#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -55,6 +55,9 @@ i {
 }
 .i-close:before {
   content: "\e904";
+}
+.i-google:before {
+  content: "\e919";
 }
 .i-building:before {
   content: "\e915";
