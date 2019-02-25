@@ -1,11 +1,16 @@
+i {
+  vertical-align: -5%;
+}
 @font-face {
   font-family: 'ldi';
-  src:
-    url('fonts/ldi.ttf?jyvdne') format('truetype'),
-    url('fonts/ldi.woff?jyvdne') format('woff'),
-    url('fonts/ldi.svg?jyvdne#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
+/* user should set this according to where they put their files.
+  src:
+    url('assets/fonts/ldi.ttf?x74ll4') format('truetype'),
+    url('assets/fonts/ldi.woff?x74ll4') format('woff'),
+    url('assets/fonts/ldi.svg?x74ll4#ldi') format('svg')
+  */
 }
 
 i {
@@ -55,9 +60,6 @@ i {
 }
 .i-close:before {
   content: "\e904";
-}
-.i-google:before {
-  content: "\e919";
 }
 .i-building:before {
   content: "\e915";
@@ -116,6 +118,6 @@ i {
 .i-check:before {
   content: "\2713";
 }
-i {
-  vertical-align: -5%;
+.i-google:before {
+  content: "\ea89";
 }
