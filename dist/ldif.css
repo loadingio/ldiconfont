@@ -106,6 +106,9 @@ i {
 .i-cog:before {
   content: "\e902";
 }
+.i-home:before {
+  content: "\e919";
+}
 .i-credit-card:before {
   content: "\e93f";
 }
