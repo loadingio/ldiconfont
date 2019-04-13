@@ -61,6 +61,12 @@ i {
 .i-close:before {
   content: "\e904";
 }
+.i-save:before {
+  content: "\e91b";
+}
+.i-lock:before {
+  content: "\e91a";
+}
 .i-building:before {
   content: "\e915";
 }
@@ -79,7 +85,7 @@ i {
 .i-circle:before {
   content: "\26ac";
 }
-.i-lock:before {
+.i-lock1:before {
   content: "\e90b";
 }
 .i-twt:before {

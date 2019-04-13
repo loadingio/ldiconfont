@@ -468,6 +468,22 @@
     {
       "selection": [
         {
+          "order": 1,
+          "id": 20,
+          "name": "save",
+          "prevSize": 28,
+          "code": 59675,
+          "tempChar": ""
+        },
+        {
+          "order": 1,
+          "id": 19,
+          "name": "lock",
+          "prevSize": 28,
+          "code": 59674,
+          "tempChar": ""
+        },
+        {
           "order": 0,
           "id": 18,
           "name": "google",
@@ -481,7 +497,7 @@
           "name": "building",
           "prevSize": 28,
           "code": 59669,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -489,7 +505,7 @@
           "name": "legal",
           "prevSize": 28,
           "code": 59670,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -497,7 +513,7 @@
           "name": "eye",
           "prevSize": 28,
           "code": 59671,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -505,7 +521,7 @@
           "name": "github",
           "prevSize": 28,
           "code": 59672,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -521,7 +537,7 @@
           "name": "question-o",
           "prevSize": 28,
           "code": 59667,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -529,15 +545,15 @@
           "name": "circle",
           "prevSize": 28,
           "code": 9900,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
           "id": 10,
           "prevSize": 28,
           "code": 59659,
-          "name": "lock",
-          "tempChar": ""
+          "name": "lock1",
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -561,7 +577,7 @@
           "name": "twt",
           "prevSize": 28,
           "code": 59656,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -569,7 +585,7 @@
           "name": "fb",
           "prevSize": 28,
           "code": 59657,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -577,7 +593,7 @@
           "name": "clone",
           "prevSize": 28,
           "code": 59654,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -585,7 +601,7 @@
           "name": "bars",
           "prevSize": 28,
           "code": 59655,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -593,7 +609,7 @@
           "name": "undo",
           "prevSize": 28,
           "code": 59653,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -601,7 +617,7 @@
           "name": "mail",
           "prevSize": 28,
           "code": 59648,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -609,7 +625,7 @@
           "name": "pencil",
           "prevSize": 28,
           "code": 59649,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 1,
@@ -617,7 +633,7 @@
           "name": "cog",
           "prevSize": 28,
           "code": 59650,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 3,
@@ -637,6 +653,39 @@
       "height": 1024,
       "prevSize": 28,
       "icons": [
+        {
+          "id": 20,
+          "paths": [
+            "M219.429 877.714h438.857v-219.429h-438.857v219.429zM731.429 877.714h73.143v-512c0-10.857-9.714-34.286-17.143-41.714l-160.571-160.571c-8-8-30.286-17.143-41.714-17.143v237.714c0 30.286-24.571 54.857-54.857 54.857h-329.143c-30.286 0-54.857-24.571-54.857-54.857v-237.714h-73.143v731.429h73.143v-237.714c0-30.286 24.571-54.857 54.857-54.857h475.429c30.286 0 54.857 24.571 54.857 54.857v237.714zM512 347.429v-182.857c0-9.714-8.571-18.286-18.286-18.286h-109.714c-9.714 0-18.286 8.571-18.286 18.286v182.857c0 9.714 8.571 18.286 18.286 18.286h109.714c9.714 0 18.286-8.571 18.286-18.286zM877.714 365.714v530.286c0 30.286-24.571 54.857-54.857 54.857h-768c-30.286 0-54.857-24.571-54.857-54.857v-768c0-30.286 24.571-54.857 54.857-54.857h530.286c30.286 0 72 17.143 93.714 38.857l160 160c21.714 21.714 38.857 63.429 38.857 93.714z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 878,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "floppy-o",
+            "save"
+          ],
+          "grid": 14
+        },
+        {
+          "id": 19,
+          "paths": [
+            "M182.857 438.857h292.571v-109.714c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286v109.714zM658.286 493.714v329.143c0 30.286-24.571 54.857-54.857 54.857h-548.571c-30.286 0-54.857-24.571-54.857-54.857v-329.143c0-30.286 24.571-54.857 54.857-54.857h18.286v-109.714c0-140.571 115.429-256 256-256s256 115.429 256 256v109.714h18.286c30.286 0 54.857 24.571 54.857 54.857z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 658,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "lock"
+          ],
+          "grid": 14
+        },
         {
           "id": 18,
           "paths": [
@@ -1002,7 +1051,7 @@
           "id": 1,
           "prevSize": 32,
           "code": 59673,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "home2, house2",
@@ -1383,7 +1432,7 @@
           "id": 64,
           "prevSize": 32,
           "code": 59711,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "calculator, compute",
@@ -1404,7 +1453,7 @@
           "id": 67,
           "prevSize": 32,
           "code": 59714,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "phone-hang-up, telephone2",
@@ -1437,7 +1486,7 @@
           "id": 72,
           "prevSize": 32,
           "code": 59719,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "location2, map-marker2",
@@ -2646,7 +2695,7 @@
           "id": 273,
           "prevSize": 32,
           "code": 10003,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark2, tick2",
@@ -3375,7 +3424,7 @@
           "id": 394,
           "prevSize": 32,
           "code": 60041,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "google3",
