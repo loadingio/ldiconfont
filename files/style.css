@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?pnhxrp') format('truetype'),
-    url('fonts/ldi.woff?pnhxrp') format('woff'),
-    url('fonts/ldi.svg?pnhxrp#ldi') format('svg');
+    url('fonts/ldi.ttf?oz06bs') format('truetype'),
+    url('fonts/ldi.woff?oz06bs') format('woff'),
+    url('fonts/ldi.svg?oz06bs#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -118,6 +118,9 @@ i {
 }
 .i-location:before {
   content: "\e947";
+}
+.i-link:before {
+  content: "\e9cb";
 }
 .i-check:before {
   content: "\2713";

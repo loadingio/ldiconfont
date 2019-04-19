@@ -2277,8 +2277,11 @@
         {
           "ligatures": "link, chain",
           "name": "link",
-          "order": 0,
-          "id": 204
+          "order": 16,
+          "id": 204,
+          "prevSize": 32,
+          "code": 59851,
+          "tempChar": ""
         },
         {
           "ligatures": "flag, report",
@@ -2695,7 +2698,7 @@
           "id": 273,
           "prevSize": 32,
           "code": 10003,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark2, tick2",
@@ -3424,7 +3427,7 @@
           "id": 394,
           "prevSize": 32,
           "code": 60041,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "google3",

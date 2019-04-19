@@ -124,6 +124,9 @@ i {
 .i-location:before {
   content: "\e947";
 }
+.i-link:before {
+  content: "\e9cb";
+}
 .i-check:before {
   content: "\2713";
 }
