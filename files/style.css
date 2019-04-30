@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'ldi';
   src:
-    url('fonts/ldi.ttf?oz06bs') format('truetype'),
-    url('fonts/ldi.woff?oz06bs') format('woff'),
-    url('fonts/ldi.svg?oz06bs#ldi') format('svg');
+    url('fonts/ldi.ttf?rjgw9j') format('truetype'),
+    url('fonts/ldi.woff?rjgw9j') format('woff'),
+    url('fonts/ldi.svg?rjgw9j#ldi') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -55,6 +55,9 @@ i {
 }
 .i-close:before {
   content: "\e904";
+}
+.i-eye-slash:before {
+  content: "\e91c";
 }
 .i-save:before {
   content: "\e91b";
