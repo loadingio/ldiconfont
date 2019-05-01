@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    link(rel="stylesheet",type="text/css",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    link(rel="stylesheet",type="text/css",href="assets/ldui.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Mono",rel="stylesheet")
+    link(href="dist/ldif.min.css",rel="stylesheet",type="text/css")
+    link(href="index.css",rel="stylesheet",type="text/css")
+  body
+    include glyphs.pug
+    br
+    br
+    .w-1200.m-auto
+      .text-center
+        h1 ldIconFont
+        p.text-muted icon font for loading.io UI
+      .sep.mt-4.mb-4
+
+      .glyphs(style="justify-content: center")
+        each glyph in glyphs
+          .glyph(onclick="parse('" + glyph.name + "')")
+            .icon: i(class="i-" + glyph.name)
+            .name #{glyph.name} #[i(class="i-" + glyph.name,style="font-size:15px")]
+            .code  #{glyph.code}
+
+    .ldcv.md: .base
+      .inner.card.m-4.position-relative.w-50.m-auto: .card-body
+        i.i-close(style="position:absolute;top:10px;right:10px")
+        .form-group
+          .float-right: a(href="#") Forget Password? #[i.i-chevron-right]
+          label Password #[i.i-lock]
+          input.form-control(placeholder="This is a demonstration of how icons look like in use")
+        .btn.btn-success.btn-block Pay $100 #[i.i-creditcard.ml-2]
+        .sep.sep-text.mt-4.mb-4: span Or
+        .list-group.mb-2
+          .list-group-item.d-flex.justify-content-between.align-items-baseline Monthly Pass #[i.i-link] 
+          .list-group-item.d-flex.justify-content-between.align-items-baseline Yearly Pass #[i.i-link] 
+        .float-right(style="position:relative;top:48px")
+          i.i-mail(style="font-size:15px;margin-right:5px")
+          i.i-mail(style="font-size:24px;margin-right:5px")
+          i.i-mail(style="font-size:36px;margin-right:5px")
+          i.i-mail(style="font-size:48px;margin-right:5px")
+        .ml-2
+          label All include:
+          div #[i.i-check.text-success] Unlimited Access
+          div #[i.i-check.text-success] Pro Features
+          div #[i.i-check.text-success] Priority Support
+        hr
+        .float-right: .btn.btn-outline-primary Cancel #[i.i-chevron-left.ml-2]
+        .btn.btn-success Subscribe #[i.i-heart.ml-2]
+      .mt-1.text-center world #[i.i-heart.text-danger] peace
+    script(src="assets/ldui.min.js")
+    script.
+      var ldcv = new ldCover({root: ".ldcv"});
+      function parse(name) {
+        ld$.find(document, ".ldcv i").map(function(n, i) {
+          var cls = n.getAttribute("class");
+          cls = cls.replace(/i-\S+/g, '')
+          n.setAttribute("class", cls)
+          n.classList.add("i-" + name)
+          ldcv.toggle();
+        });
+      }

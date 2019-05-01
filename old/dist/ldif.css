@@ -1,0 +1,135 @@
+i {
+  vertical-align: -5%;
+}
+@font-face {
+  font-family: 'ldi';
+  font-weight: normal;
+  font-style: normal;
+/* user should set this according to where they put their files.
+  src:
+    url('assets/fonts/ldi.ttf?x74ll4') format('truetype'),
+    url('assets/fonts/ldi.woff?x74ll4') format('woff'),
+    url('assets/fonts/ldi.svg?x74ll4#ldi') format('svg')
+  */
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ldi' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-heart:before {
+  content: "\e914";
+}
+.i-chevron-up:before {
+  content: "\e90c";
+}
+.i-chevron-right:before {
+  content: "\e90d";
+}
+.i-chevron-left:before {
+  content: "\e90e";
+}
+.i-dart-right:before {
+  content: "\e90f";
+}
+.i-dart-left:before {
+  content: "\e910";
+}
+.i-dart-down:before {
+  content: "\e911";
+}
+.i-dart-up:before {
+  content: "\e912";
+}
+.i-chevron-down:before {
+  content: "\e903";
+}
+.i-drag:before {
+  content: "\e90a";
+}
+.i-close:before {
+  content: "\e904";
+}
+.i-save:before {
+  content: "\e91b";
+}
+.i-lock:before {
+  content: "\e91a";
+}
+.i-building:before {
+  content: "\e915";
+}
+.i-legal:before {
+  content: "\e916";
+}
+.i-eye:before {
+  content: "\e917";
+}
+.i-github:before {
+  content: "\e918";
+}
+.i-question-o:before {
+  content: "\e913";
+}
+.i-circle:before {
+  content: "\26ac";
+}
+.i-lock1:before {
+  content: "\e90b";
+}
+.i-twt:before {
+  content: "\e908";
+}
+.i-fb:before {
+  content: "\e909";
+}
+.i-clone:before {
+  content: "\e906";
+}
+.i-bars:before {
+  content: "\e907";
+}
+.i-undo:before {
+  content: "\e905";
+}
+.i-mail:before {
+  content: "\e900";
+}
+.i-pencil:before {
+  content: "\e901";
+}
+.i-cog:before {
+  content: "\e902";
+}
+.i-home:before {
+  content: "\e919";
+}
+.i-credit-card:before {
+  content: "\e93f";
+}
+.i-phone:before {
+  content: "\e942";
+}
+.i-location:before {
+  content: "\e947";
+}
+.i-link:before {
+  content: "\e9cb";
+}
+.i-check:before {
+  content: "\2713";
+}
+.i-google:before {
+  content: "\ea89";
+}

@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-rm -rf dist/
-mkdir -p dist
-echo "build src/base.styl -> dist/ldif.css ..."
-./node_modules/.bin/stylus -p src/base.styl > dist/ldif.css
-echo "truncate head lines of files/style.css ->> dist/ldif.css..."
-tail -n +10 files/style.css >> dist/ldif.css
-echo "Uglifying ldif.css..."
-uglifycss dist/ldif.css > dist/ldif.min.css
-echo "copy font files..."
-cp -R files/fonts dist/fonts
-echo "done."
-
+#rm web/svg/*.svg
+#cp ~/memo/loading/resources/iconfont/ldif_*.svg web/svg/
+echo "Generating Font File..."
+./node_modules/.bin/lsc main
+echo "build src/font.styl -> dist/ldi.css ..."
+./node_modules/.bin/stylus -p src/font.styl > dist/ldif.css
+echo "minifying dist/ldif.css ..."
+./node_modules/.bin/uglifycss dist/ldif.css > dist/ldif.min.css
+echo "Touch web index file..."
+touch web/index.pug
