@@ -3,7 +3,6 @@
   font-weight: normal;
   font-style: normal;
 /* this shold be overwritten by users to point to correct path */
-  src: url("fonts/ldi.ttf") format('truetype');
 }
 i {
 /* use !important to prevent issues with browser extensions that change fonts */
@@ -126,4 +125,22 @@ i.i-twt:before {
 }
 i.i-github:before {
   content: "\f023";
+}
+i.i-doc:before {
+  content: "\f024";
+}
+i.i-undo:before {
+  content: "\f025";
+}
+i.i-print:before {
+  content: "\f026";
+}
+i.i-check-o:before {
+  content: "\f027";
+}
+i.i-search:before {
+  content: "\f028";
+}
+i.i-plus:before {
+  content: "\f029";
 }

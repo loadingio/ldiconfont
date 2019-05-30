@@ -34,5 +34,11 @@
   "google": "f020",
   "fb": "f021",
   "twt": "f022",
-  "github": "f023"
+  "github": "f023",
+  "doc": "f024",
+  "undo": "f025",
+  "print": "f026",
+  "check-o": "f027",
+  "search": "f028",
+  "plus": "f029"
 }
