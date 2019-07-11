@@ -39,7 +39,7 @@ handle = (list) -> new Promise (res, rej) ->
 
         svg = """<?xml version="1.0"?>
         <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-        <path transform="translate(0,90) scale(1,-1)" d="#path"/>
+        <path transform="translate(0,80) scale(1,-1)" d="#path"/>
         </svg>
         """
         svgo.optimize svg
@@ -89,7 +89,7 @@ handle svgs
     <svg xmlns="http://www.w3.org/2000/svg">
     <defs>
     <font id="ldi">
-      <font-face units-per-em="90" ascent="70" descent="20"/>
+      <font-face units-per-em="100" ascent="90" descent="10"/>
       <missing-glyph horiz-adv-x="90"/>
       #glyphs
     </font>

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'ldi';
+  font-weight: normal;
+  font-style: normal;
+  src: url("dist/fonts/ldi.ttf") format('truetype');
+}
 body {
   font-size: 16px;
   font-family: Roboto, sans-serif;

@@ -40,5 +40,6 @@
   "print": "f026",
   "check-o": "f027",
   "search": "f028",
-  "plus": "f029"
+  "plus": "f029",
+  "sync": "f030"
 }
