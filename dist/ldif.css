@@ -149,3 +149,6 @@ i.i-plus:before {
 i.i-sync:before {
   content: "\f030";
 }
+i.i-upload:before {
+  content: "\f031";
+}

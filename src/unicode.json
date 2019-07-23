@@ -41,5 +41,6 @@
   "check-o": "f027",
   "search": "f028",
   "plus": "f029",
-  "sync": "f030"
+  "sync": "f030",
+  "upload": "f031"
 }
