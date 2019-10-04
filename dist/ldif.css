@@ -152,3 +152,6 @@ i.i-sync:before {
 i.i-upload:before {
   content: "\f031";
 }
+i.i-html:before {
+  content: "\f032";
+}
