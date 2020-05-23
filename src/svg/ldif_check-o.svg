@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#040000;}
-</style>
+	 viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
 <path d="M45,12c18.2,0,33,14.8,33,33S63.2,78,45,78S12,63.2,12,45S26.8,12,45,12 M45,6C23.5,6,6,23.5,6,45s17.5,39,39,39
-	s39-17.5,39-39S66.5,6,45,6L45,6z M71.1,35.1l-4.2-4.2L39,58.8L23.1,42.9l-4.2,4.2L39,67.2L71.1,35.1z"/>
+	s39-17.5,39-39S66.5,6,45,6L45,6z"/>
+<polygon points="39,67.2 18.9,47.1 23.1,42.9 39,58.8 66.9,30.9 71.1,35.1 "/>
 </svg>

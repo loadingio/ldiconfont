@@ -43,5 +43,7 @@
   "plus": "f029",
   "sync": "f030",
   "upload": "f031",
-  "html": "f032"
+  "html": "f032",
+  "square": "f033",
+  "checkbox": "f034"
 }

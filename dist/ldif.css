@@ -20,6 +20,9 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+i.i-ldif:before {
+  content: "\2600";
+}
 i.i-heart:before {
   content: "\f000";
 }
@@ -154,4 +157,10 @@ i.i-upload:before {
 }
 i.i-html:before {
   content: "\f032";
+}
+i.i-square:before {
+  content: "\f033";
+}
+i.i-checkbox:before {
+  content: "\f034";
 }
