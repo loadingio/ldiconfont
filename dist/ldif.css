@@ -20,9 +20,6 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-i.i-ldif:before {
-  content: "\2600";
-}
 i.i-heart:before {
   content: "\f000";
 }
