@@ -161,3 +161,12 @@ i.i-square:before {
 i.i-checkbox:before {
   content: "\f034";
 }
+i.i-stop:before {
+  content: "\f035";
+}
+i.i-play:before {
+  content: "\f036";
+}
+i.i-pause:before {
+  content: "\f037";
+}

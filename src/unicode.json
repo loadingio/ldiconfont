@@ -45,5 +45,8 @@
   "upload": "f031",
   "html": "f032",
   "square": "f033",
-  "checkbox": "f034"
+  "checkbox": "f034",
+  "stop": "f035",
+  "play": "f036",
+  "pause": "f037"
 }
