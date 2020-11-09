@@ -23,7 +23,7 @@ block body
       p this page demonstrate the looks and feels when using ldiconfont.
       .d-flex
         .flex-grow-1
-          .nav.nav-pills
+          .nav.nav-pills.mr-auto
             .nav-item: a.nav-link.active #[i.i-doc] Active
             .nav-item: a.nav-link Active
             .nav-item: a.nav-link Active
@@ -55,7 +55,7 @@ block body
           .nav-item: a.nav-link.active #[i.i-doc] Active
           .nav-item: a.nav-link Active
           .nav-item: a.nav-link Active
-          .nav-item: a.nav-link Active
+          .nav-item.ml-auto: a.nav-link Active #[i.i-question]
 
         .border.border-top-0.p-4.mb-4
           label All include:
@@ -123,6 +123,9 @@ block body
       .col-md-3
         h5.d-flex #[.flex-grow-1 About] #[i.i-gear]
         p no description, website, or tipcs provided.
+        p: .d-flex.text-truncate.align-items-center
+          i.i-link.mr-2
+          a.text-truncate(href="https://github.com/loadingio/ldiconfont") https://github.com/loadingio/ldiconfont
         p #[i.i-doc] Read More
         hr
         br
@@ -139,5 +142,12 @@ block body
         .form-chcek
           i.i-square.mr-1
           label.form-check-label Checkbox
+
+    .py-2
+    h4 Reference Site
+    ul
+      li https://github.com/loadingio/ldiconfont
+      li https://sentry.io
+    +nbr(4)
 block script
   +script("/js/demo/index.js")
