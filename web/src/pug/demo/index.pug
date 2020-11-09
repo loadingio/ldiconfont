@@ -1,0 +1,143 @@
+extends /base.pug
+block body
+  include ldcv.pug
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.text-light
+    a.navbar-brand Navbar
+    button.navbar-toggler: i.i-bars
+    ul.navbar-nav.mr-auto
+      li.nav-item.active: a.nav-link item
+    ul.navbar-nav
+      .nav-item: a.nav-link: i.i-doc
+      .nav-item: a.nav-link: i.i-doc
+      .nav-item: a.nav-link: i.i-doc
+      .nav-item: a.nav-link: i.i-doc
+  .w-100.bg-light
+    .w-1024.rwd.mx-auto.py-4: .my-4
+      .d-flex
+        .flex-grow-1.d-flex
+          h1 Use Case #[sup: i.i-heart]
+        div
+          .btn.btn-sm.btn-outline-secondary.mr-2 #[i.i-eye] GitHub 
+          .btn.btn-sm.btn-outline-secondary.mr-2 #[i.i-eye] GitHub 
+          .btn.btn-sm.btn-outline-secondary #[i.i-eye] GitHub 
+      p this page demonstrate the looks and feels when using ldiconfont.
+      .d-flex
+        .flex-grow-1
+          .nav.nav-pills
+            .nav-item: a.nav-link.active #[i.i-doc] Active
+            .nav-item: a.nav-link Active
+            .nav-item: a.nav-link Active
+            .nav-item: a.nav-link Active
+        .dropdown
+          .btn.btn-primary.dropdown-toggle(data-toggle="dropdown") Hello World
+          .dropdown-menu.dropdown-menu-right.shadow(style="width:20em")
+            .dropdown-item.px-3
+              .d-flex
+                div: i.i-doc
+                .flex-grow-1.mx-2.font-weight-bold  Open in ...
+                div: i.i-chevron-right
+              .input-group.input-group-sm.my-2
+                input.form-control
+                .input-group-append
+                  .btn.btn-outline-secondary: i.i-doc
+              .text-sm.text-muted.mb-3 some dummy text here
+            each i in [1,2,3,4]
+              .dropdown-item.d-flex.p-3.border-top
+                div: i.i-doc
+                .flex-grow-1.mx-3 Open in Visual Studio
+                div: i.i-chevron-right
+            
+
+  .w-1024.rwd.mx-auto.my-4
+    .row
+      .col-md-9
+        .nav.nav-tabs
+          .nav-item: a.nav-link.active #[i.i-doc] Active
+          .nav-item: a.nav-link Active
+          .nav-item: a.nav-link Active
+          .nav-item: a.nav-link Active
+
+        .border.border-top-0.p-4.mb-4
+          label All include:
+          .mb-4
+            div #[i.i-check.text-success] Unlimited Access
+            div #[i.i-check.text-success] Pro Features
+            div #[i.i-check.text-success] Priority Support
+          .btn.btn-secondary.mr-2 Enable Plan #[i.i-check]
+          .btn.btn-outline-secondary(ld="more-detail") More Detail #[i.i-chevron-right]
+
+        .card.mb-4
+          .card-header
+            .d-flex
+              .flex-grow-1
+                i.i-home
+                span.ml-2 Some description about this ...
+
+              div #[i.i-doc.mr-1] 20 minutes
+          .list-group.list-group-flush
+            each i in [1,2,3,4,5,6,7,8,9]
+              .list-group-item.d-flex
+                .flex-grow-1
+                  i.i-doc.mr-2
+                  span Item 1
+                .flex-grow-1 some descriptions... #[i.i-doc]
+                span 22 minutes ago
+        .card.mb-4
+          .card-body
+            .d-flex
+              .flex-grow-1 README.md
+              .mx-2: i.i-doc
+              .mx-2: i.i-doc
+              .mx-2: i.i-doc
+          .px-4.pb-4: div: :md
+
+            # ldView
+
+            A simple, logic-less client side template engine.
+
+
+            ## Usage
+
+            ldView works by defining what elements are and how should they be processed. Instead of defining how html should be rendered inside DOM, we name elements and assign processors in JavaScript according to their names.
+
+            For example, following code names three DIVs with "ld" attributes in "plan free", "plan month", and "plan year":
+
+                body
+                  div(ld="plan free")
+                  div(ld="plan month")
+                  div(ld="plan year")
+
+
+            To bind the corresponding processor, create a new ldView object with a handler object:
+
+                view = new ldView do
+                  root: document.body
+                  handler: do
+                    # this example actually demonstrates how to do a if/else or switch/case statement.
+                    plan: ({node, names, name, container, idx, nodes, context, local}) ->
+                      node.style.display = (if currentPlan in names => 'block' else 'none')
+
+
+
+
+      .col-md-3
+        h5.d-flex #[.flex-grow-1 About] #[i.i-gear]
+        p no description, website, or tipcs provided.
+        p #[i.i-doc] Read More
+        hr
+        br
+        h5.d-flex #[.flex-grow-1 Options] #[i.i-gear]
+        .form-chcek
+          i.i-radio.mr-1
+          label.form-check-label Radio ( Checked )
+        .form-chcek
+          i.i-circle.mr-1
+          label.form-check-label Radio
+        .form-chcek
+          i.i-checkbox.mr-1
+          label.form-check-label Checkbox ( Checked )
+        .form-chcek
+          i.i-square.mr-1
+          label.form-check-label Checkbox
+block script
+  +script("/js/demo/index.js")

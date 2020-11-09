@@ -1,13 +1,7 @@
-doctype html
-html
-  include /../../static/assets/lib/bootstrap.ldui/main/index.pug
-  head
-    +css("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-    +css("/assets/lib/bootstrap.ldui/main/bootstrap.ldui.min.css")
-    +css("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Mono")
-    +css("/assets/lib/ldcover/main/ldcv.min.css")
-    +css("/assets/lib/ldif/dev/ldif.css")
-    +css("/css/index.css")
+extends /base.pug
+block vars
+block head
+block body
   body
     include /../../../gen/glyphs.pug
     br
@@ -53,8 +47,6 @@ html
         .float-right: .btn.btn-outline-primary Cancel #[i.i-chevron-left.ml-2]
         .btn.btn-success Subscribe #[i.i-heart.ml-2]
       .mt-1.text-center world #[i.i-heart.text-danger] peace
-    +script("/assets/lib/bootstrap.ldui/main/bootstrap.ldui.min.js")
-    +script("/assets/lib/@loadingio/ldquery/main/ldq.min.js")
-    +script("/assets/lib/ldcover/main/ldcv.min.js")
-    +script("/js/index.js")
-    script: :lsc
+
+block script
+  +script("/js/index.js")
