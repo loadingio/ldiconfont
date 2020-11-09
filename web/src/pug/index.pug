@@ -1,13 +1,15 @@
 doctype html
 html
+  include /../../static/assets/lib/bootstrap.ldui/main/index.pug
   head
-    link(rel="stylesheet",type="text/css",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-    link(rel="stylesheet",type="text/css",href="assets/ldui.min.css")
-    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Mono",rel="stylesheet")
-    link(href="dist/ldif.css",rel="stylesheet",type="text/css")
-    link(href="index.css",rel="stylesheet",type="text/css")
+    +css("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+    +css("/assets/lib/bootstrap.ldui/main/bootstrap.ldui.min.css")
+    +css("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Mono")
+    +css("/assets/lib/ldcover/main/ldcv.min.css")
+    +css("/assets/lib/ldif/dev/ldif.css")
+    +css("/css/index.css")
   body
-    include glyphs.pug
+    include /../../../gen/glyphs.pug
     br
     br
     .w-1200.m-auto
@@ -22,6 +24,8 @@ html
             .icon: i(class="i-" + glyph.name)
             .name #{glyph.name} #[i(class="i-" + glyph.name,style="font-size:15px")]
             .code  #{glyph.code}
+        each i in [0,1,2,3,4,5,6]
+          .glyph
 
     .ldcv.md: .base
       .inner.card.m-4.position-relative.w-50.m-auto: .card-body
@@ -49,15 +53,8 @@ html
         .float-right: .btn.btn-outline-primary Cancel #[i.i-chevron-left.ml-2]
         .btn.btn-success Subscribe #[i.i-heart.ml-2]
       .mt-1.text-center world #[i.i-heart.text-danger] peace
-    script(src="assets/ldui.min.js")
-    script.
-      var ldcv = new ldCover({root: ".ldcv"});
-      function parse(name) {
-        ld$.find(document, ".ldcv i").map(function(n, i) {
-          var cls = n.getAttribute("class");
-          cls = cls.replace(/i-\S+/g, '')
-          n.setAttribute("class", cls)
-          n.classList.add("i-" + name)
-          ldcv.toggle();
-        });
-      }
+    +script("/assets/lib/bootstrap.ldui/main/bootstrap.ldui.min.js")
+    +script("/assets/lib/@loadingio/ldquery/main/ldq.min.js")
+    +script("/assets/lib/ldcover/main/ldcv.min.js")
+    +script("/js/index.js")
+    script: :lsc

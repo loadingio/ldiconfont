@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-#rm web/svg/*.svg
-#cp ~/memo/loading/resources/iconfont/ldif_*.svg web/svg/
 echo "Generating Font File..."
 ./node_modules/.bin/lsc main
 echo "build src/font.styl -> dist/ldi.css ..."
 ./node_modules/.bin/stylus -p src/font.styl > dist/ldif.css
 echo "minifying dist/ldif.css ..."
 ./node_modules/.bin/uglifycss dist/ldif.css > dist/ldif.min.css
+echo "copy dist to dev web ..."
+rm -rf web/static/assets/lib/ldif/dev/
+mkdir -p web/static/assets/lib/ldif
+cp -R dist web/static/assets/lib/ldif/dev
 echo "Touch web index file..."
-touch web/index.pug
+touch web/src/pug/index.pug

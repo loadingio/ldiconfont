@@ -102,6 +102,6 @@ handle svgs
     ttf = svg2ttf(font-svg, {})
     fs.write-file-sync 'dist/fonts/ldi.ttf', Buffer.from(ttf.buffer)
     console.log "generating glyphs.styl..."
-    fs.write-file-sync 'src/glyphs.styl', stylus
+    fs.write-file-sync 'gen/glyphs.styl', stylus
     console.log "generating glyphs.pug..."
-    fs.write-file-sync 'web/glyphs.pug', pug
+    fs.write-file-sync 'gen/glyphs.pug', pug
