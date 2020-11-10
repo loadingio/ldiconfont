@@ -56,6 +56,11 @@ You can also use ldiconfont to build your own iconfont by installing ldiconfont 
     npm install --save ldiconfont
     npx ldif  ... ( parameters ) ...
 
+sample command for 80x80 SVGs:
+
+    npx ldif -s 80 -i ~/path/to/svg -a 70.5 -y -9.5 -d out
+
+
 
 ## Verify Your Build
 
