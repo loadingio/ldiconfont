@@ -57,6 +57,12 @@ You can also use ldiconfont to build your own iconfont by installing ldiconfont 
     npx ldif  ... ( parameters ) ...
 
 
+## Verify Your Build
+
+use `npx ldif-server -d <your-font-dist-folder>` to start up a test server for viewing the result of your customized build.
+
+
+
 ## Challenges
 
  - Correctly align vertically - https://christopheraue.net/design/vertical-align

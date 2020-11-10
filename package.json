@@ -3,7 +3,8 @@
   "name": "ldiconfont",
   "license": "MIT",
   "bin": {
-    "ldif": "./bin/makefont.js"
+    "ldif": "./bin/makefont.js",
+    "ldif-server": "./bin/server.js"
   },
   "description": "iconfont dedicated for loading.io",
   "version": "0.1.0",
