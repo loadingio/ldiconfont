@@ -1,0 +1,16 @@
+//- module
+mixin choosefont
+  .choosefont.toolbar
+    .choosefont-head.form-inline
+      .dropdown.mr-2
+        .btn.btn-outline-secondary.dropdown-toggle(
+        style="min-width:10em",data-toggle="dropdown",data-category-holder="true") Category ...
+        .dropdown-menu
+          each name in ["All", "Serif", "Sans Serif", "Display", "Handwriting", "Monospace", "Chinese"]
+            a.dropdown-item(href="#",data-category=name) #{name}
+      input.form-control.mr-2(placeholder="Search...")
+      .btn.btn-text.mx-2 or
+      .btn.btn-outline-secondary.btn-upload(
+      data-action="upload") Use Your Own Font #[i.i-lock.ml-1]#[input(type="file")]
+    .choosefont-content
+    block

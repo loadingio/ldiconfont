@@ -1,13 +1,16 @@
 //- module
-.ldcv: .base.w-1024.rwd: .inner.card
+.ldcv.ldcv-view: .base.w-1024.rwd: .inner.card
   .card-body
     .row
       .col-md
         .form-group
           label Font Family
-          select.form-control(ld="fontfamily")
-            each n in ["Roboto","Rubik","Goldman","Noto Sans TC"]
-              option(value=n,selected=(n=="Roboto"))= n
+          .input-group
+            select.form-control(ld="fontfamily")
+              each n in ["Roboto","Rubik","Goldman","Noto Sans TC"]
+                option(value=n,selected=(n=="Roboto"))= n
+            .input-group-append
+              .btn.btn-outline-secondary(style="border-color:#ccc",ld="morefont") ...
       .col-md
         .form-group
           label Icon
