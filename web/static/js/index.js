@@ -100,6 +100,12 @@ view = new ldView({
       hint: function(){
         view.get("viewer").classList.toggle('active');
         return view.get("hint-text").innerText = view.get("viewer").classList.contains('active') ? "On" : "Off";
+      },
+      useflexbox: function(){
+        view.get("inner").classList.toggle('d-flex');
+        view.get("inner").classList.toggle('align-items-center');
+        view.get("inner").classList.toggle('justify-content-center');
+        return view.get("flexbox-text").innerText = view.get("inner").classList.contains('d-flex') ? "On" : "Off";
       }
     }
   }

@@ -10,14 +10,20 @@ block head
       color: #39414c
     .viewer
       font-family: Roboto
-      font-size: 64px
+      font-size: 128px
     .viewer.active
       background: #ddd
       .inner
         background: #eee
         i
-          background: rgba(128,200,255,.5)
+          background: rgba(255,200,128,.5)
           outline: 1px solid #f00
+        i:before
+          background: rgba(255,255,0,.3)
+          outline: 1px solid #ff0
+        div
+          background: rgba(128,200,255,.5)
+          outline: 1px solid #09f
 block body
   body
     .w-1200.mx-auto.rwd

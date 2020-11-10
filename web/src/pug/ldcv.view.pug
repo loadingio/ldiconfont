@@ -19,7 +19,7 @@
           label Font Size
           select.form-control(ld="fontsize")
             each n in [12,16,24,32,64,128]
-              option(value=n,selected=(n==64))= n
+              option(value=n,selected=(n==128))= n
       .col-md
         .form-group
           label Icon Size
@@ -35,13 +35,15 @@
 
   .bg-light.p-4.border-top.border-bottom
     .viewer(ld="viewer")
-      .d-flex.inner.justify-content-center.align-items-center
-        div #[span H]#[span g]#[span a]
+      .inner.text-center(ld="inner")
+        .d-inline-block #[span H]#[span g]#[span a]
         i.i-fb(ld="icon")
-        div 國一ば뮤
+        .d-inline-block 國一ば뮤
   .card-body
     .row
       .col-md
         .btn.btn-lg.btn-block.btn-primary(ld="hint") Toggle Hint: #[span(ld="hint-text") Off]
+      .col-md
+        .btn.btn-lg.btn-block.btn-primary(ld="useflexbox") Align with Flexbox: #[span(ld="flexbox-text") Off]
       .col-md
         .btn.btn-lg.btn-block.btn-outline-dark(data-ldcv-set="") Close Popup

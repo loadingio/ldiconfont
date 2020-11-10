@@ -43,8 +43,8 @@ argv = yargs
 
 size = argv.s or 90
 mapfile = argv.m
-ascent = +argv.a or 70
-offset-y = +argv.y or -13
+ascent = if argv.a? => +argv.a else 70
+offset-y = if argv.y? => +argv.y else -13
 dist = argv.d or 'dist'
 srcdir = argv.i or 'src/svg'
 
@@ -140,7 +140,7 @@ handle svgs
     <svg xmlns="http://www.w3.org/2000/svg">
     <defs>
     <font id="ldi">
-      <font-face units-per-em="#{size}" ascent="#ascent"/>
+      <font-face units-per-em="#{size}" ascent="#ascent" descent="#{size - ascent}"/>
       <missing-glyph horiz-adv-x="#{size}"/>
       #glyphs
     </font>
@@ -152,10 +152,6 @@ handle svgs
     console.log "generating TTF font..."
     ttf = svg2ttf(font-svg, {})
     fs.write-file-sync path.join(dist, 'ldif.ttf'), Buffer.from(ttf.buffer)
-    #console.log "generating glyphs.styl..."
-    #fs.write-file-sync path.join(dist,'glyphs.styl'), stylus-code
-    #console.log "generating glyphs.pug..."
-    #fs.write-file-sync path.join(dist,'glyphs.pug'), pug
     console.log "generating ldif.css ..."
     stylus-code = fs.read-file-sync(path.join(__dirname,"../src/font.styl")).toString! + stylus-code
     fs.write-file-sync path.join(dist, "ldif.json"), json

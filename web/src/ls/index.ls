@@ -38,3 +38,8 @@ view = new ldView do
       hint: ->
         view.get("viewer").classList.toggle(\active)
         view.get("hint-text").innerText = if view.get("viewer").classList.contains(\active) => "On" else "Off"
+      useflexbox: ->
+        view.get("inner").classList.toggle(\d-flex)
+        view.get("inner").classList.toggle(\align-items-center)
+        view.get("inner").classList.toggle(\justify-content-center)
+        view.get("flexbox-text").innerText = if view.get("inner").classList.contains(\d-flex) => "On" else "Off"

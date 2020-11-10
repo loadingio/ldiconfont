@@ -43,8 +43,10 @@ argv = yargs.option('size', {
 }).argv;
 size = argv.s || 90;
 mapfile = argv.m;
-ascent = +argv.a || 70;
-offsetY = +argv.y || -13;
+ascent = argv.a != null ? +argv.a : 70;
+offsetY = argv.y != null
+  ? +argv.y
+  : -13;
 dist = argv.d || 'dist';
 srcdir = argv.i || 'src/svg';
 map = mapfile
@@ -149,7 +151,7 @@ handle(svgs).then(function(){
     return "  <glyph unicode=\"&#x" + code + ";\" glyph-name=\"" + name + "\" d=\"" + path + "\"/>";
   }).join('\n');
   console.log("generating SVG font...");
-  fontSvg = "<?xml version=\"1.0\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\">\n<defs>\n<font id=\"ldi\">\n  <font-face units-per-em=\"" + size + "\" ascent=\"" + ascent + "\"/>\n  <missing-glyph horiz-adv-x=\"" + size + "\"/>\n  " + glyphs + "\n</font>\n</defs>\n</svg>";
+  fontSvg = "<?xml version=\"1.0\"?>\n<svg xmlns=\"http://www.w3.org/2000/svg\">\n<defs>\n<font id=\"ldi\">\n  <font-face units-per-em=\"" + size + "\" ascent=\"" + ascent + "\" descent=\"" + (size - ascent) + "\"/>\n  <missing-glyph horiz-adv-x=\"" + size + "\"/>\n  " + glyphs + "\n</font>\n</defs>\n</svg>";
   fsExtra.ensureDirSync(dist);
   fs.writeFileSync(path.join(dist, "ldif.svg"), fontSvg);
   console.log("generating TTF font...");

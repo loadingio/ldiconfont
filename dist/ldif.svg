@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <defs>
 <font id="ldi">
-  <font-face units-per-em="90" ascent="70"/>
+  <font-face units-per-em="90" ascent="70" descent="20"/>
   <missing-glyph horiz-adv-x="90"/>
     <glyph unicode="&#xf000;" glyph-name="heart" d="M90 50.3C90 24.5 51.5 5 45-6.9 38.9 5.1 0 24.8 0 50.3 0 77.7 45 79 45 48.7c0 30.3 45 29 45 1.6z"/>
   <glyph unicode="&#xf001;" glyph-name="home" d="M87.9 27.6L45 63.9 30 51.2V59H18V41L2.1 27.6l7.8-9.2 8.1 6.9V-1h19.6v17.6h14.8V-1H72v26.3l8.1-6.9z"/>
