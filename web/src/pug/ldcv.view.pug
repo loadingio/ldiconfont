@@ -1,0 +1,47 @@
+//- module
+.ldcv: .base.w-1024.rwd: .inner.card
+  .card-body
+    .row
+      .col-md
+        .form-group
+          label Font Family
+          select.form-control(ld="fontfamily")
+            each n in ["Roboto","Rubik","Goldman","Noto Sans TC"]
+              option(value=n,selected=(n=="Roboto"))= n
+      .col-md
+        .form-group
+          label Icon
+          select.form-control(ld="iconname")
+            each n in ["fb","google","upload","chevron-right","gear"]
+              option(value=n,selected=(n=="fb"))= n
+      .col-md
+        .form-group
+          label Font Size
+          select.form-control(ld="fontsize")
+            each n in [12,16,24,32,64,128]
+              option(value=n,selected=(n==64))= n
+      .col-md
+        .form-group
+          label Icon Size
+          select.form-control(ld="iconsize")
+            each n in [0.5,0.8,1,1.2,2]
+              option(value=n,selected=(n==1))= n
+      .col-md
+        .form-group
+          label Tweak Vertically
+          select.form-control(ld="verticaloffset")
+            each n in [-5,-4,-3,-2,-1,0,1,2,3,4,5]
+              option(value=n,selected=(n==0))= n
+
+  .bg-light.p-4.border-top.border-bottom
+    .viewer(ld="viewer")
+      .d-flex.inner.justify-content-center.align-items-center
+        div #[span H]#[span g]#[span a]
+        i.i-fb(ld="icon")
+        div 國一ば뮤
+  .card-body
+    .row
+      .col-md
+        .btn.btn-lg.btn-block.btn-primary(ld="hint") Toggle Hint: #[span(ld="hint-text") Off]
+      .col-md
+        .btn.btn-lg.btn-block.btn-outline-dark(data-ldcv-set="") Close Popup

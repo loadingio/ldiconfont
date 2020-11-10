@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
+rm -rf dist
+mkdir -p dist
+mkdir -p bin
+echo "build src/makefont.ls -> bin/makefont.js"
+rm bin/makefont.js
+echo "#!/usr/bin/env node" > bin/makefont.js
+./node_modules/.bin/lsc -cpb src/makefont.ls >> bin/makefont.js
+chmod 755 bin/makefont.js
+
 echo "Generating Font File..."
-./node_modules/.bin/lsc main
-echo "build src/font.styl -> dist/ldi.css ..."
-./node_modules/.bin/stylus -p src/font.styl > dist/ldif.css
-echo "minifying dist/ldif.css ..."
-./node_modules/.bin/uglifycss dist/ldif.css > dist/ldif.min.css
+./bin/makefont.js -s 90 -m src/unicode.json -i src/svg -a 70 -y '-13' -d dist
+
 echo "copy dist to dev web ..."
 rm -rf web/static/assets/lib/ldif/dev/
 mkdir -p web/static/assets/lib/ldif
 cp -R dist web/static/assets/lib/ldif/dev
-echo "Touch web index file..."
-touch web/src/pug/index.pug
+#echo "Touch web index file..."
+#touch web/src/pug/index.pug

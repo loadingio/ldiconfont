@@ -1,52 +1,36 @@
 extends /base.pug
 block vars
 block head
+  link(href="https://fonts.googleapis.com/css2?family=Goldman&family=Noto+Sans+TC&family=Roboto:wght@300&family=Rubik&display=swap",rel="stylesheet")
+  style(type="text/css"): :stylus
+    .glyphs
+      grid-template-columns: repeat(7,minmax(64px,1fr))
+      display: grid
+      gap: 10px
+      color: #39414c
+    .viewer
+      font-family: Roboto
+      font-size: 64px
+    .viewer.active
+      background: #ddd
+      .inner
+        background: #eee
+        i
+          background: rgba(128,200,255,.5)
+          outline: 1px solid #f00
 block body
   body
-    include /../../../gen/glyphs.pug
-    br
-    br
-    .w-1200.m-auto
-      .text-center
+    .w-1200.mx-auto.rwd
+      .text-center.my-4.py-4
         h1 ldIconFont
         p.text-muted icon font for loading.io UI
-      .sep.mt-4.mb-4
+      .glyphs
+        .glyph(ld-each="glyph"): div(ld="cell")
+          .icon: i(ld="icon")
+          .name #[span.mr-1(ld="name")]#[i(ld="icon")]
+          .code(ld="code")
 
-      .glyphs(style="justify-content: center")
-        each glyph in glyphs
-          .glyph(onclick="parse('" + glyph.name + "')")
-            .icon: i(class="i-" + glyph.name)
-            .name #{glyph.name} #[i(class="i-" + glyph.name,style="font-size:15px")]
-            .code  #{glyph.code}
-        each i in [0,1,2,3,4,5,6]
-          .glyph
-
-    .ldcv.md: .base
-      .inner.card.m-4.position-relative.w-50.m-auto: .card-body
-        i.i-close(style="position:absolute;top:10px;right:10px")
-        .form-group
-          .float-right: a(href="#") Forget Password? #[i.i-chevron-right]
-          label Password #[i.i-lock]
-          input.form-control(placeholder="This is a demonstration of how icons look like in use")
-        .btn.btn-success.btn-block Pay $100 #[i.i-creditcard.ml-2]
-        .sep.sep-text.mt-4.mb-4: span Or
-        .list-group.mb-2
-          .list-group-item.d-flex.justify-content-between.align-items-baseline Monthly Pass #[i.i-link] 
-          .list-group-item.d-flex.justify-content-between.align-items-baseline Yearly Pass #[i.i-link] 
-        .float-right(style="position:relative;top:48px")
-          i.i-mail(style="font-size:15px;margin-right:5px")
-          i.i-mail(style="font-size:24px;margin-right:5px")
-          i.i-mail(style="font-size:36px;margin-right:5px")
-          i.i-mail(style="font-size:48px;margin-right:5px")
-        .ml-2
-          label All include:
-          div #[i.i-check.text-success] Unlimited Access
-          div #[i.i-check.text-success] Pro Features
-          div #[i.i-check.text-success] Priority Support
-        hr
-        .float-right: .btn.btn-outline-primary Cancel #[i.i-chevron-left.ml-2]
-        .btn.btn-success Subscribe #[i.i-heart.ml-2]
-      .mt-1.text-center world #[i.i-heart.text-danger] peace
+  include ldcv.view.pug
 
 block script
   +script("/js/index.js")
