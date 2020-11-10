@@ -19,7 +19,6 @@ ld$.fetch("assets/lib/ldif/dev/ldif.json", {
   type: 'json'
 }).then(function(ldif){
   var view;
-  console.log(ldif);
   return view = new ldView({
     root: document.body,
     handler: {
@@ -67,7 +66,6 @@ ld$.fetch("assets/lib/ldif/dev/ldif.json", {
 ldcv = new ldCover({
   root: '.ldcv'
 });
-ldcv.toggle();
 view = new ldView({
   root: '.ldcv',
   action: {

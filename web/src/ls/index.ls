@@ -9,7 +9,6 @@ parse = (name) ->
 
 ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
   .then (ldif) ->
-    console.log ldif
     view = new ldView do
       root: document.body
       handler:
@@ -26,7 +25,6 @@ ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
 
 ldcv = new ldCover do
   root: \.ldcv
-ldcv.toggle!
 view = new ldView do
   root: \.ldcv
   action: do
