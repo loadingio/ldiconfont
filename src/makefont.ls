@@ -59,11 +59,23 @@ progress-bar = (total = 10, text = "converting") ->
   )
   return bar
 
+optimize = (d,code) ->
+  svgo.optimize code
+    .then (ret) ->
+      dom = new jsdom.JSDOM(ret.data).window.document
+      try
+        path = dom.querySelector("path").getAttribute("d")
+      catch e
+        console.log "[FAILED] #{d.name} parse failed."
+        path = null
+      return {name: d.name, path: path, code: map[d.name] or (9728 + i).toString(16)}
+
 console.log "reading SVG folder..."
 svgs = fs.readdir-sync srcdir
 console.log "total #{svgs.length} glyphs to parse."
 bar = progress-bar svgs.length
-local = {}
+local = lc = {}
+local.symbols = []
 local.glyphs = glyphs = []
 svgs = svgs
   .map -> do
@@ -74,34 +86,19 @@ handle = (list) -> new Promise (res, rej) ->
   _ = (i = 0)->
     d = list.splice(0, 1).0
     if !d => return res!
-    svgo.optimize d.svg
+    optimize d, d.svg
       .then (ret) ->
-
-        dom = new jsdom.JSDOM(ret.data).window.document
-        try
-          path = dom.querySelector("path").getAttribute("d")
-        catch e
-          console.log "[FAILED] #{d.name} parse failed."
-          path = null
-
+        lc.symbols.push ret
         # adjust y coord of the first translate ( translate(0,-13) ) to offset glyph while keeping its box untainted
-        svg = """<?xml version="1.0"?>
+        svg-for-glyph = """<?xml version="1.0"?>
         <svg viewBox="0 0 #{size} #{size}" xmlns="http://www.w3.org/2000/svg">
-        <path transform="translate(0,#{offset-y}) translate(#{size/2},#{size/2}) scale(1,-1) translate(-#{size/2},-#{size/2})" d="#path"/>
+        <path transform="translate(0,#{offset-y}) translate(#{size/2},#{size/2}) scale(1,-1) translate(-#{size/2},-#{size/2})" d="#{ret.path}"/>
         </svg>
         """
-        svgo.optimize svg
+        optimize d, svg-for-glyph
       .then (ret) ->
-
-        dom = new jsdom.JSDOM(ret.data).window.document
-        try
-          path = dom.querySelector("path").getAttribute("d")
-        catch e
-          console.log "[FAILED] #{d.name} parse failed."
-          path = null
-
+        glyphs.push ret
         bar.tick!
-        glyphs.push {name: d.name, path: path, code: map[d.name] or (9728 + i).toString(16)}
       .then -> _(i + 1)
   _!
 
@@ -109,15 +106,7 @@ handle svgs
   .then ->
     console.log "parsed. generate pug and stylus code..."
     glyphs.sort (a, b) -> parseInt(a.code,16) - parseInt(b.code,16)
-    json = JSON.stringify(glyphs)
-    /*
-    pug = glyphs
-      .map (d,i) -> JSON.stringify(d)
-      .join(',')
-
-    pug = "//- module\n- var glyphs = [#pug];"
-    */
-
+    glyph-json = JSON.stringify(glyphs)
     stylus-code = "//- module\n" + glyphs
       .map (d,i) ->
         {name, code} = d
@@ -128,33 +117,50 @@ handle svgs
       .join('\n')
 
     console.log "from path to glyph..."
-    glyphs := glyphs
+    glyph-tags = glyphs
       .map (d,i) ->
         {code, name, path} = d
         """  <glyph unicode="&\#x#code;" glyph-name="#name" d="#path"/>"""
-      .join('\n')
+      .join \\n
+    glyph-views = lc.symbols
+      .map (d,i) ->
+        {code, name, path} = d
+        """
+        <view id="#name" viewBox="#{size * i} 0 #size #size">
+        </view>
+        <g transform="translate(#{size * i},0)"><path d="#path"/></g>
+        """
+      .join \\n
 
     console.log "generating SVG font..."
     font-svg = """
     <?xml version="1.0"?>
+    <!-- While we use it to generate TTF file, SVG Font is deprecated. Don't use this in browser -->
     <svg xmlns="http://www.w3.org/2000/svg">
     <defs>
     <font id="ldi">
       <font-face units-per-em="#{size}" ascent="#ascent" descent="#{size - ascent}"/>
       <missing-glyph horiz-adv-x="#{size}"/>
-      #glyphs
+      #glyph-tags
     </font>
     </defs>
     </svg>
     """
+    icon-svg = """
+    <?xml version="1.0"?>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      #glyph-views
+    </svg>
+    """
     fs-extra.ensure-dir-sync dist
-    fs.write-file-sync path.join(dist,"ldif.svg"), font-svg
+    fs.write-file-sync path.join(dist,"ldif.font.svg"), font-svg
+    fs.write-file-sync path.join(dist,"ldif.icon.svg"), icon-svg
     console.log "generating TTF font..."
     ttf = svg2ttf(font-svg, {})
     fs.write-file-sync path.join(dist, 'ldif.ttf'), Buffer.from(ttf.buffer)
     console.log "generating ldif.css ..."
     stylus-code = fs.read-file-sync(path.join(__dirname,"../src/font.styl")).toString! + stylus-code
-    fs.write-file-sync path.join(dist, "ldif.json"), json
+    fs.write-file-sync path.join(dist, "ldif.json"), glyph-json
     stylus stylus-code
       .set \filename, path.join(__dirname,"../src/font.styl")
       .render (e, code) ->

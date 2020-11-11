@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- While we use it to generate TTF file, SVG Font is deprecated. Don't use this in browser -->
 <svg xmlns="http://www.w3.org/2000/svg">
 <defs>
 <font id="ldi">

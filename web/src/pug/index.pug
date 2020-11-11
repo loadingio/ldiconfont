@@ -30,6 +30,10 @@ block body
       .text-center.my-4.py-4
         h1 ldIconFont
         p.text-muted icon font for loading.io UI
+        //- it's possible to use css mask to color SVG icon via img tag. following is a proof of concept code.
+        //- yet mask sometimes overflow thus introducing clipping around icon corner.
+        //- we adjust mask size to make it a little smaller yet this make icon size inaccurate.
+        //- div(style="color:#f92;font-size:64px"): div(style="width:1em;height:1em"): .aspect-ratio.ratio-1by1.border(style="background-color:currentColor;-webkit-mask:url(/assets/lib/ldif/dev/ldif.svg#heart);-webkit-mask-size:.8em;-webkit-mask-repeat:no-repeat;-webkit-mask-position:center center")
       .glyphs
         .glyph(ld-each="glyph"): div(ld="cell")
           .icon: i(ld="icon")
