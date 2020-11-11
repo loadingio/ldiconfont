@@ -38,7 +38,7 @@ argv = yargs.option('size', {
   alias: 'd',
   description: "output directory. default `dist` if omitted.",
   type: 'string'
-}).help().alias('help', 'h').check(function(argv, options){
+}).help('help').alias('help', 'h').check(function(argv, options){
   return true;
 }).argv;
 size = argv.s || 90;

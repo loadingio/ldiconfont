@@ -36,7 +36,7 @@ argv = yargs
     alias: \d
     description: "output directory. default `dist` if omitted."
     type: \string
-  .help!
+  .help \help
   .alias \help, \h
   .check (argv, options) -> return true
   .argv
