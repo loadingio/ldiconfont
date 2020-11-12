@@ -19,7 +19,8 @@
   },
   "scripts": {
     "start": "cd web; npx server",
-    "deploy": "npx deploy web/static"
+    "deploy": "npx deploy web/static",
+    "fedep": "npx fedep -s false"
   },
   "devDependencies": {
     "@loadingio/ldquery": "^1.1.0",
@@ -45,6 +46,7 @@
   "frontendDependencies": {
     "root": "web/static/assets/lib",
     "modules": [
+      "bootstrap",
       "bootstrap.ldui",
       "ldCover",
       "@loadingio/ldquery",
@@ -52,5 +54,8 @@
       "bootstrap.native",
       "choosefont.js"
     ]
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
   }
 }
