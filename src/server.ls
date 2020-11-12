@@ -5,7 +5,7 @@ argv = yargs
     alias: \d
     description: "custom font directory"
     type: \string
-  .help!
+  .help \help
   .alias \help, \h
   .check (argv, options) ->
     if !(argv.d and fs.exists-sync(argv.d)) => throw new Error("custom font directory required.")
@@ -16,6 +16,7 @@ dir = argv.d
 dir = path.resolve(dir)
 
 opt = do
+  port: 1615
   api: ({app}) ->
     app.get \/assets/lib/ldif/dev/:fn, (req, res) ->
       if !(ret = /\.(ttf|css|json)$/.exec(req.params.fn)) => res.status(404).send!

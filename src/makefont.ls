@@ -28,7 +28,7 @@ argv = yargs
     alias: \a
     description: "tweak box vertical position based on desired font family. negative toward down, postive toward up. default 70"
     type: \number
-  .option \y, do
+  .option \offset-y, do
     alias: \y
     description: "adjust glyph vertical position. negative toward down, positive toward up. default -13"
     type: \number
@@ -59,7 +59,7 @@ progress-bar = (total = 10, text = "converting") ->
   )
   return bar
 
-optimize = (d,code) ->
+optimize = (d, i, code) ->
   svgo.optimize code
     .then (ret) ->
       dom = new jsdom.JSDOM(ret.data).window.document
@@ -86,7 +86,7 @@ handle = (list) -> new Promise (res, rej) ->
   _ = (i = 0)->
     d = list.splice(0, 1).0
     if !d => return res!
-    optimize d, d.svg
+    optimize d, i, d.svg
       .then (ret) ->
         lc.symbols.push ret
         # adjust y coord of the first translate ( translate(0,-13) ) to offset glyph while keeping its box untainted
@@ -95,7 +95,7 @@ handle = (list) -> new Promise (res, rej) ->
         <path transform="translate(0,#{offset-y}) translate(#{size/2},#{size/2}) scale(1,-1) translate(-#{size/2},-#{size/2})" d="#{ret.path}"/>
         </svg>
         """
-        optimize d, svg-for-glyph
+        optimize d, i, svg-for-glyph
       .then (ret) ->
         glyphs.push ret
         bar.tick!

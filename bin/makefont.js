@@ -30,7 +30,7 @@ argv = yargs.option('size', {
   alias: 'a',
   description: "tweak box vertical position based on desired font family. negative toward down, postive toward up. default 70",
   type: 'number'
-}).option('y', {
+}).option('offset-y', {
   alias: 'y',
   description: "adjust glyph vertical position. negative toward down, positive toward up. default -13",
   type: 'number'
@@ -68,7 +68,7 @@ progressBar = function(total, text){
   });
   return bar;
 };
-optimize = function(d, code){
+optimize = function(d, i, code){
   return svgo.optimize(code).then(function(ret){
     var dom, path, e;
     dom = new jsdom.JSDOM(ret.data).window.document;
@@ -109,11 +109,11 @@ handle = function(list){
       if (!d) {
         return res();
       }
-      return optimize(d, d.svg).then(function(ret){
+      return optimize(d, i, d.svg).then(function(ret){
         var svgForGlyph;
         lc.symbols.push(ret);
         svgForGlyph = "<?xml version=\"1.0\"?>\n<svg viewBox=\"0 0 " + size + " " + size + "\" xmlns=\"http://www.w3.org/2000/svg\">\n<path transform=\"translate(0," + offsetY + ") translate(" + size / 2 + "," + size / 2 + ") scale(1,-1) translate(-" + size / 2 + ",-" + size / 2 + ")\" d=\"" + ret.path + "\"/>\n</svg>";
-        return optimize(d, svgForGlyph);
+        return optimize(d, i, svgForGlyph);
       }).then(function(ret){
         glyphs.push(ret);
         return bar.tick();

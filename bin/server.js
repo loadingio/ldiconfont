@@ -9,7 +9,7 @@ argv = yargs.option('dist', {
   alias: 'd',
   description: "custom font directory",
   type: 'string'
-}).help().alias('help', 'h').check(function(argv, options){
+}).help('help').alias('help', 'h').check(function(argv, options){
   if (!(argv.d && fs.existsSync(argv.d))) {
     throw new Error("custom font directory required.");
   }
@@ -18,6 +18,7 @@ argv = yargs.option('dist', {
 dir = argv.d;
 dir = path.resolve(dir);
 opt = {
+  port: 1615,
   api: function(arg$){
     var app;
     app = arg$.app;
