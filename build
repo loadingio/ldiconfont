@@ -15,6 +15,9 @@ chmod 755 bin/server.js
 echo "Generating Font File..."
 ./bin/makefont.js -s 90 -m src/unicode.json -i src/svg -a 70 -y '-13' -d dist
 
+echo "Generating Alternative Font File..."
+./bin/makefont.js -s 80 -m src/unicode.json -i src/ai/svg/line-alt/ -a 70 -y '-10' -d dist/line-alt/
+
 echo "copy dist to dev web ..."
 rm -rf web/static/assets/lib/ldif/dev/
 mkdir -p web/static/assets/lib/ldif
