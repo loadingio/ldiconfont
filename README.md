@@ -84,6 +84,20 @@ Basic construct of SVG Font:
       missing-glyph
 
 
+## TODO
+
+ - refine the list of icon that we should make including following scenario:
+   - Generic Set
+   - Text Editor
+   - Source Control
+   - Media Player
+ - refine icons to make them more consistent and pixel-perfect, in 12px ~ 18px.
+ - support (light, regular, bold) x (solid, line) = 6 different styles.
+ - support SVG fragment and SVG embed with proper document and even API.
+ - refine icon development process
+ - add additional preview scenario such as a sample view when using in GitHub.
+
+
 ## License
 
 MIT
