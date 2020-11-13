@@ -1,5 +1,4 @@
-line-alt
+Line-alt
  - 追加:
-   - `terminal`, `desktop`, `zip`, `question-circle`, `clipboard`,
-     `dart-(udlr)`, `smiley`, `avatar`, 
+   - `smiley`, `avatar`, `comment`, `bulb`
   
