@@ -12,15 +12,16 @@ echo "#!/usr/bin/env node" > bin/server.js
 ./node_modules/.bin/lsc -cpb src/server.ls >> bin/server.js
 chmod 755 bin/server.js
 
-echo "Generating Font File..."
-./bin/makefont.js -s 90 -m src/unicode.json -i src/svg -a 70 -y '-13' -d dist
+echo "Generating 'Line' Font File..."
+./bin/makefont.js -s 800 -m src/unicode.json -i src/vector-files/line/svg -a 700 -y '-130' -d dist/line
 
-echo "Generating Alternative Font File..."
-./bin/makefont.js -s 80 -m src/unicode.json -i src/ai/svg/line-alt/ -a 70 -y '-10' -d dist/line-alt/
+echo "Generating 'Legacy' Font File..."
+./bin/makefont.js -s 90 -m src/unicode.json -i src/vector-files/legacy/svg -a 80 -y '-13' -d dist/legacy
+
+echo "make 'line' the default icon set..."
+cp dist/line/* dist
 
 echo "copy dist to dev web ..."
 rm -rf web/static/assets/lib/ldif/dev/
 mkdir -p web/static/assets/lib/ldif
 cp -R dist web/static/assets/lib/ldif/dev
-#echo "Touch web index file..."
-#touch web/src/pug/index.pug
