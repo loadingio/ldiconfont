@@ -98,6 +98,11 @@ Basic construct of SVG Font:
  - add additional preview scenario such as a sample view when using in GitHub.
 
 
+## Reference
+
+ - https://lambdatest.com/blog/its-2019-lets-end-the-debate-on-icon-fonts-vs-svg-icons
+
+
 ## License
 
 MIT
