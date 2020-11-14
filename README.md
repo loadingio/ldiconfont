@@ -45,11 +45,13 @@ replace `ldif` with your custom class and tweak `top` value to match your font.
 run `./bin/makefont.js` to make a custom build. available parameters:
 
  - map ( -m ) - optional unicode / icon name mapping file. check src/unicode.json for format.
- - size ( -s ) - glyph size ( default 90 )
+ - units-per-em ( -u ) - glyph size ( default 900 )
  - input ( -i ) - input directory of SVGs. file name of SVG will be its icon name.
- - ascent ( -a ) - ascent for tweaking icon vertical alignment.
- - y ( -y ) - ascent for tweaking icon vertical alignment.
+ - ascent ( -a ) - ascent for tweaking icon vertical alignment. default 700
+ - offset-y ( -y ) - ascent for tweaking icon vertical alignment. default -130
  - dir ( -d ) - output directory. `dist` if omitted.
+
+Additionally, you can add a config.json under your input directory, `makefont` will parse and use it to config build automatically. Check `src/vector-files/line/svg/config.json` as an example.
 
 You can also use ldiconfont to build your own iconfont by installing ldiconfont then run:
 
@@ -58,7 +60,7 @@ You can also use ldiconfont to build your own iconfont by installing ldiconfont 
 
 sample command for 80x80 SVGs:
 
-    npx ldif -s 80 -i ~/path/to/svg -a 70.5 -y -9.5 -d out
+    npx ldif -u 80 -i ~/path/to/svg -a 70.5 -y -9.5 -d out
 
 
 
@@ -82,6 +84,16 @@ Basic construct of SVG Font:
       glyph
       ...
       missing-glyph
+
+
+## Structure
+
+ldiconfont provides different variants and favors. You can find all of them in `dist/<favor>`, with source counterparts under `src/vector-files/<favor>`, including source illustrator file ( raw paths and merged composite shape ) and generated SVG files. 
+
+Currently we only provide two favors:
+
+ - line ( default font after 0.1.0 )
+ - legacy ( icons used in 0.0.1 )
 
 
 ## TODO

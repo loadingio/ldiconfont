@@ -13,10 +13,10 @@ echo "#!/usr/bin/env node" > bin/server.js
 chmod 755 bin/server.js
 
 echo "Generating 'Line' Font File..."
-./bin/makefont.js -s 800 -m src/unicode.json -i src/vector-files/line/svg -a 700 -y '-130' -d dist/line
+./bin/makefont.js -u 800 -m src/unicode.json -i src/vector-files/line/svg -a 700 -y '-130' -d dist/line
 
 echo "Generating 'Legacy' Font File..."
-./bin/makefont.js -s 90 -m src/unicode.json -i src/vector-files/legacy/svg -a 80 -y '-13' -d dist/legacy
+./bin/makefont.js -u 90 -m src/unicode.json -i src/vector-files/legacy/svg -a 80 -y '-13' -d dist/legacy
 
 echo "make 'line' the default icon set..."
 cp dist/line/* dist

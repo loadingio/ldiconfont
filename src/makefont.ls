@@ -11,11 +11,18 @@ require! <[fs fs-extra stylus uglifycss path svg2ttf jsdom progress colors svgo 
 # Roboto
 [offset-y,ascent] = [-13,70]
 
+# expect to support following attributes
+# - horiz-origin-x
+# - horiz-origin-y
+# - horiz-adv-x
+# - vert-origin-x
+# - vert-origin-y
+# - vert-adv-y
+# - units-per-em
+# - ascent
+# - descent
+
 argv = yargs
-  .option \size, do
-    alias: \s
-    description: "glyph size. default 90"
-    type: \number
   .option \map, do
     alias: \m
     description: "unicode/icon name mapping file.auto assign if omitted"
@@ -24,9 +31,13 @@ argv = yargs
     alias: \i
     description: "input directory of SVGs. default `src/svg`"
     type: \string
+  .option \units-per-em, do
+    alias: \u
+    description: "units-per-em. default 900"
+    type: \number
   .option \ascent, do
     alias: \a
-    description: "tweak box vertical position based on desired font family. negative toward down, postive toward up. default 70"
+    description: "ascent. tweak box vertical position based on desired font family. negative toward down, postive toward up. default 700"
     type: \number
   .option \offset-y, do
     alias: \y
@@ -41,12 +52,20 @@ argv = yargs
   .check (argv, options) -> return true
   .argv
 
-size = argv.s or 90
+config = {}
 mapfile = argv.m
-ascent = if argv.a? => +argv.a else 70
-offset-y = if argv.y? => +argv.y else -13
 dist = argv.d or 'dist'
 srcdir = argv.i or 'src/svg'
+
+if fs.exists-sync path.join(srcdir, 'config.json') => 
+  config = JSON.parse(fs.read-file-sync path.join(srcdir, 'config.json') .toString!)
+  ascent = config["ascent"]
+  offset-y = config["offset-y"]
+  size = config["units-per-em"]
+
+size = argv.u or size or 900
+ascent = if argv.a? => +argv.a else if ascent? => ascent else 700
+offset-y = if argv.y? => +argv.y else if offset-y? => offset-y else -130
 
 map = if mapfile => JSON.parse(fs.read-file-sync mapfile .toString!) else {}
 
@@ -71,7 +90,7 @@ optimize = (d, i, code) ->
       return {name: d.name, path: path, code: map[d.name] or (9728 + i).toString(16)}
 
 console.log "reading SVG folder..."
-svgs = fs.readdir-sync srcdir
+svgs = fs.readdir-sync srcdir .filter -> /\.svg$/.exec(it)
 console.log "total #{svgs.length} glyphs to parse."
 bar = progress-bar svgs.length
 local = lc = {}
@@ -156,7 +175,7 @@ handle svgs
     fs.write-file-sync path.join(dist,"ldif.font.svg"), font-svg
     fs.write-file-sync path.join(dist,"ldif.icon.svg"), icon-svg
     console.log "generating TTF font..."
-    ttf = svg2ttf(font-svg, {})
+    ttf = svg2ttf(font-svg, {} <<< (config or {}))
     fs.write-file-sync path.join(dist, 'ldif.ttf'), Buffer.from(ttf.buffer)
     console.log "generating ldif.css ..."
     stylus-code = fs.read-file-sync(path.join(__dirname,"../src/font.styl")).toString! + stylus-code
