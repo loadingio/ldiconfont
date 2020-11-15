@@ -1,11 +1,8 @@
 # ldIconFont
 
-build icon font using SVG font. Reference:
+![ldiconfont preview](https://github.com/loadingio/ldiconfont/blob/master/screenshot.png?raw=true)
 
- - [SVG 1.1 - Fonts](https://www.w3.org/TR/SVG11/fonts.html)
- - [SVG Font Element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font)
- - [SVG Font Related Attributes](https://docs.google.com/spreadsheets/d/1NBUILrdB3uDDPzyicEU8WApkTXL9sZVmta7yneXlKIA/edit?usp=sharing)
- - [Font's Measurement Units](https://i.stack.imgur.com/Z0TnA.png)
+Build icon font with SVGs, along with a pixel-perfect line icon set in 16x16 resolution, along with source Ai files and SVG files.
 
 
 ## Usage
@@ -112,7 +109,11 @@ Currently we only provide two favors:
 
 ## Reference
 
- - https://lambdatest.com/blog/its-2019-lets-end-the-debate-on-icon-fonts-vs-svg-icons
+ - [SVG 1.1 - Fonts](https://www.w3.org/TR/SVG11/fonts.html)
+ - [SVG Font Element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/font)
+ - [SVG Font Related Attributes](https://docs.google.com/spreadsheets/d/1NBUILrdB3uDDPzyicEU8WApkTXL9sZVmta7yneXlKIA/edit?usp=sharing)
+ - [Font's Measurement Units](https://i.stack.imgur.com/Z0TnA.png)
+ - [Icon Fonts vs SVG Icons](https://lambdatest.com/blog/its-2019-lets-end-the-debate-on-icon-fonts-vs-svg-icons)
 
 
 ## License
