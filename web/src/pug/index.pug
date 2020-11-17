@@ -1,5 +1,7 @@
 extends /base.pug
 block vars
+block prehead
+  base(href=".")
 block head
   link(href="https://fonts.googleapis.com/css2?family=Goldman&family=Noto+Sans+TC&family=Roboto:wght@300&family=Rubik&display=swap",rel="stylesheet")
   style(type="text/css"): :stylus
@@ -44,4 +46,4 @@ block body
   include ldcv.view.pug
 
 block script
-  +script("/js/index.js")
+  +script("js/index.js")
