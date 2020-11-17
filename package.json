@@ -45,7 +45,8 @@
     "svgo": "^1.2.2",
     "template": "github:zbryikt/template#v2.1.2",
     "uglifycss": "=0.0.29",
-    "yargs": "^16.1.0"
+    "yargs": "^16.1.0",
+    "bootstrap": "^4.5.3"
   },
   "frontendDependencies": {
     "root": "web/static/assets/lib",
@@ -58,8 +59,5 @@
       "bootstrap.native",
       "choosefont.js"
     ]
-  },
-  "dependencies": {
-    "bootstrap": "^4.5.3"
   }
 }
