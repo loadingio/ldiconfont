@@ -6,6 +6,10 @@
     "ldif": "./bin/makefont.js",
     "ldif-server": "./bin/server.js"
   },
+  "files": [
+    "dist",
+    "bin"
+  ],
   "description": "iconfont dedicated for loading.io",
   "version": "0.1.0",
   "homepage": "https://github.com/loadingio/ldiconfont",
