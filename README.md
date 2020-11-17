@@ -2,7 +2,7 @@
 
 ![ldiconfont preview](https://github.com/loadingio/ldiconfont/blob/master/screenshot.png?raw=true)
 
-Build icon font with SVGs, along with a pixel-perfect line icon set in 16x16 resolution, along with source Ai files and SVG files.
+Build icon font with SVGs, along with a pixel-perfect line icon set in 24x24 / 16x16 resolution, along with source Ai files and SVG files.
 
 
 ## Usage
@@ -55,10 +55,11 @@ You can also use ldiconfont to build your own iconfont by installing ldiconfont 
     npm install --save ldiconfont
     npx ldif  ... ( parameters ) ...
 
-sample command for 80x80 SVGs:
+sample command for 800 x 800 SVGs:
 
-    npx ldif -u 80 -i ~/path/to/svg -a 70.5 -y -9.5 -d out
+    npx ldif -u 800 -i ~/path/to/svg -a 700.5 -y -90.5 -d out
 
+We suggest using units-per-em greater than 800 to prevent precision loss when converting to ttf.
 
 
 ## Verify Your Build
@@ -87,10 +88,11 @@ Basic construct of SVG Font:
 
 ldiconfont provides different variants and favors. You can find all of them in `dist/<favor>`, with source counterparts under `src/vector-files/<favor>`, including source illustrator file ( raw paths and merged composite shape ) and generated SVG files. 
 
-Currently we only provide two favors:
+Currently we only provide 3 favors:
 
- - line ( default font after 0.1.0 )
- - legacy ( icons used in 0.0.1 )
+ - Line 24 x 24 bold ( default font after 0.1.0 )
+ - Line 16 x 16 light
+ - Legacy ( icons used in 0.0.1 )
 
 
 ## TODO
