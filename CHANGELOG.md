@@ -1,3 +1,10 @@
+## 0.1.1
+
+ - upgrade packages including `template`, `fedep`, `livescript`.
+ - rebuild dist with upgraded packages.
+ - add demo link to `github` page.
+
+
 ## 0.1.0 
 
 icon update:
