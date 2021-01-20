@@ -26,43 +26,43 @@ i.ldif:before
 */
 /*@import '../gen/glyphs.styl'*/
 i.i-bulb:before {
-  content: "\2606";
+  content: "\2609";
 }
 i.i-clone:before {
-  content: "\2611";
+  content: "\2614";
 }
 i.i-close:before {
-  content: "\2613";
-}
-i.i-comment:before {
-  content: "\2615";
-}
-i.i-creditcard:before {
   content: "\2616";
 }
+i.i-comment:before {
+  content: "\2618";
+}
+i.i-creditcard:before {
+  content: "\2619";
+}
 i.i-drag:before {
-  content: "\261e";
-}
-i.i-eye-slash:before {
-  content: "\2620";
-}
-i.i-eye:before {
   content: "\2621";
 }
+i.i-eye-slash:before {
+  content: "\2623";
+}
+i.i-eye:before {
+  content: "\2624";
+}
 i.i-fb:before {
-  content: "\2622";
+  content: "\2625";
 }
 i.i-github:before {
-  content: "\2626";
+  content: "\2629";
 }
 i.i-google:before {
-  content: "\2627";
+  content: "\262a";
 }
 i.i-location:before {
-  content: "\2630";
+  content: "\2633";
 }
 i.i-twt:before {
-  content: "\264a";
+  content: "\264d";
 }
 i.i-heart:before {
   content: "\f000";
@@ -267,4 +267,13 @@ i.i-checkbox-off:before {
 }
 i.i-redo:before {
   content: "\f055";
+}
+i.i-alt:before {
+  content: "\f056";
+}
+i.i-cmd:before {
+  content: "\f057";
+}
+i.i-shift:before {
+  content: "\f058";
 }

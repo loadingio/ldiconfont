@@ -1,3 +1,8 @@
+## 0.1.2
+
+ - add icons for keys `shift`, `alt` and `cmd`.
+
+
 ## 0.1.1
 
  - upgrade packages including `template`, `fedep`, `livescript`.
