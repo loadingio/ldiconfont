@@ -32,6 +32,8 @@ block body
       .text-center.my-4.py-4
         h1 ldIconFont
         p.text-muted icon font for loading.io UI. #[a(href="github/") Demo using Github-like UI]
+        .btn-group
+          .btn.btn-outline-primary(ld-each="switch")
         //- it's possible to use css mask to color SVG icon via img tag. following is a proof of concept code.
         //- yet mask sometimes overflow thus introducing clipping around icon corner.
         //- we adjust mask size to make it a little smaller yet this make icon size inaccurate.
@@ -47,3 +49,25 @@ block body
 
 block script
   +script("js/index.js")
+  script: :lsc
+    links = <[line-24-bold line-16-light]>.map (n) ->
+      link = document.createElement \link
+      link.setAttribute \rel, "stylesheet"
+      link.setAttribute \type, "text/css"
+      link.setAttribute \href, "/assets/lib/ldif/dev/#n/ldif.css"
+      {node: link, name: n}
+    document.head.appendChild links.0.node
+
+    view = new ldView do
+      root: document.body
+      handler:
+        switch:
+          list: -> links
+          key: -> it.name
+          action: click: ({data}) ->
+            links.map -> if it.node.parentNode => it.node.parentNode.removeChild it.node
+            document.head.appendChild data.node
+            view.render!
+          text: ({node, data}) -> return data.name
+          handler: ({node, data}) -> node.classList.toggle \active, data.node.parentNode
+

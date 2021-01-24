@@ -1,9 +1,10 @@
-@font-face {
-  font-family: 'ldi';
-  font-weight: normal;
-  font-style: normal;
-  src: url("/assets/lib/ldif/dev/ldif.ttf") format('truetype');
-}
+/*@font-face
+  font-family: 'ldi'
+  font-weight: normal
+  font-style: normal
+  src: url('/assets/lib/ldif/dev/ldif.ttf') format('truetype')
+  //src: url('/assets/lib/custom/ldif.ttf') format('truetype')
+*/
 body {
   font-size: 16px;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

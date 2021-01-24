@@ -26,40 +26,40 @@ i.ldif:before
 */
 /*@import '../gen/glyphs.styl'*/
 i.i-bulb:before {
-  content: "\2609";
+  content: "\2607";
 }
 i.i-clone:before {
-  content: "\2614";
+  content: "\2612";
 }
 i.i-close:before {
-  content: "\2616";
+  content: "\2614";
 }
 i.i-comment:before {
-  content: "\2618";
+  content: "\2617";
 }
 i.i-creditcard:before {
-  content: "\2619";
+  content: "\2618";
 }
 i.i-drag:before {
-  content: "\2621";
+  content: "\2620";
 }
 i.i-eye-slash:before {
-  content: "\2623";
+  content: "\2622";
 }
 i.i-eye:before {
-  content: "\2624";
+  content: "\2623";
 }
 i.i-fb:before {
-  content: "\2625";
+  content: "\2624";
 }
 i.i-github:before {
-  content: "\2629";
+  content: "\2628";
 }
 i.i-google:before {
-  content: "\262a";
+  content: "\2629";
 }
 i.i-location:before {
-  content: "\2633";
+  content: "\2632";
 }
 i.i-twt:before {
   content: "\264d";
