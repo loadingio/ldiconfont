@@ -1,3 +1,8 @@
+## 0.1.3
+
+ - fix `line-16-light` icon bug ( icons don't match their names )
+ - add style switcher in demo page
+
 ## 0.1.2
 
  - add icons for keys `shift`, `alt` and `cmd`.
