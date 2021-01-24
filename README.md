@@ -2,7 +2,7 @@
 
 ![ldiconfont preview](https://github.com/loadingio/ldiconfont/blob/master/screenshot.png?raw=true)
 
-Build icon font with SVGs, along with a pixel-perfect line icon set in 24x24 / 16x16 resolution, along with source Ai files and SVG files.
+Build icon font with SVGs, along with a pixel-perfect line icon set in 24x24 / 16x16 resolution, along with source Ai files and SVG files. Check our [Live Demo](http://loadingio.github.io/ldiconfont/) for ldiconfont in action. 
 
 
 ## Usage
