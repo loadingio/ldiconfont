@@ -1,6 +1,7 @@
 ## 0.1.4 (upcoming)
 
  - tweak `line-24-bold` upload icon alignment
+ - add `info-circle` icon in `line-24-bold` and `line-16-light`
 
 
 ## 0.1.3
