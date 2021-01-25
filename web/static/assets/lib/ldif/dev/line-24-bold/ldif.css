@@ -29,40 +29,40 @@ i.i-bulb:before {
   content: "\2607";
 }
 i.i-clone:before {
-  content: "\2612";
+  content: "\2616";
 }
 i.i-close:before {
-  content: "\2614";
-}
-i.i-comment:before {
-  content: "\2617";
-}
-i.i-creditcard:before {
   content: "\2618";
 }
+i.i-comment:before {
+  content: "\261b";
+}
+i.i-creditcard:before {
+  content: "\261c";
+}
 i.i-drag:before {
-  content: "\2620";
-}
-i.i-eye-slash:before {
-  content: "\2622";
-}
-i.i-eye:before {
-  content: "\2623";
-}
-i.i-fb:before {
   content: "\2624";
 }
-i.i-github:before {
+i.i-eye-slash:before {
+  content: "\2626";
+}
+i.i-eye:before {
+  content: "\2627";
+}
+i.i-fb:before {
   content: "\2628";
 }
+i.i-github:before {
+  content: "\262c";
+}
 i.i-google:before {
-  content: "\2629";
+  content: "\262d";
 }
 i.i-location:before {
-  content: "\2633";
+  content: "\2637";
 }
 i.i-twt:before {
-  content: "\264e";
+  content: "\2652";
 }
 i.i-heart:before {
   content: "\f000";
@@ -279,4 +279,16 @@ i.i-shift:before {
 }
 i.i-info-circle:before {
   content: "\f059";
+}
+i.i-caret-right:before {
+  content: "\f05a";
+}
+i.i-caret-left:before {
+  content: "\f05b";
+}
+i.i-caret-up:before {
+  content: "\f05c";
+}
+i.i-caret-down:before {
+  content: "\f05d";
 }

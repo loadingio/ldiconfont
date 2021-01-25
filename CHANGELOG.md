@@ -1,3 +1,8 @@
+## 0.1.6 (upcoming)
+
+ - add caret icons ( right, left, up, down ) in both `line-24-bold` and `line-16-light`
+
+
 ## 0.1.5
 
  - rebuild icons

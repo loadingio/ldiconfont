@@ -77,5 +77,9 @@
   "alt": "f056",
   "cmd": "f057",
   "shift": "f058",
-  "info-circle": "f059"
+  "info-circle": "f059",
+  "caret-right": "f05a",
+  "caret-left": "f05b",
+  "caret-up": "f05c",
+  "caret-down": "f05d"
 }
