@@ -59,10 +59,10 @@ i.i-google:before {
   content: "\2629";
 }
 i.i-location:before {
-  content: "\2632";
+  content: "\2633";
 }
 i.i-twt:before {
-  content: "\264d";
+  content: "\264e";
 }
 i.i-heart:before {
   content: "\f000";
@@ -276,4 +276,7 @@ i.i-cmd:before {
 }
 i.i-shift:before {
   content: "\f058";
+}
+i.i-info-circle:before {
+  content: "\f059";
 }

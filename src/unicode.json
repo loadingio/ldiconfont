@@ -76,5 +76,6 @@
   "redo": "f055",
   "alt": "f056",
   "cmd": "f057",
-  "shift": "f058"
+  "shift": "f058",
+  "info-circle": "f059"
 }
