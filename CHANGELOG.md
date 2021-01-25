@@ -1,3 +1,8 @@
+## 0.1.4 (upcoming)
+
+ - tweak `line-24-bold` upload icon alignment
+
+
 ## 0.1.3
 
  - fix `line-16-light` icon bug ( icons don't match their names )
