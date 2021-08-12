@@ -2,6 +2,7 @@
   font-family: 'ldi';
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 /* this shold be overwritten by users to point to correct path */
   src: url("ldif.ttf") format('truetype');
 }
@@ -26,43 +27,43 @@ i.ldif:before
 */
 /*@import '../gen/glyphs.styl'*/
 i.i-bulb:before {
-  content: "\2606";
+  content: "\2607";
 }
 i.i-clone:before {
-  content: "\2611";
-}
-i.i-close:before {
-  content: "\2613";
-}
-i.i-comment:before {
-  content: "\2615";
-}
-i.i-creditcard:before {
   content: "\2616";
 }
+i.i-close:before {
+  content: "\2618";
+}
+i.i-comment:before {
+  content: "\261b";
+}
+i.i-creditcard:before {
+  content: "\261c";
+}
 i.i-drag:before {
-  content: "\261e";
+  content: "\2624";
 }
 i.i-eye-slash:before {
-  content: "\2620";
-}
-i.i-eye:before {
-  content: "\2621";
-}
-i.i-fb:before {
-  content: "\2622";
-}
-i.i-github:before {
   content: "\2626";
 }
-i.i-google:before {
+i.i-eye:before {
   content: "\2627";
 }
+i.i-fb:before {
+  content: "\2628";
+}
+i.i-github:before {
+  content: "\262c";
+}
+i.i-google:before {
+  content: "\262d";
+}
 i.i-location:before {
-  content: "\2630";
+  content: "\2637";
 }
 i.i-twt:before {
-  content: "\264a";
+  content: "\2652";
 }
 i.i-heart:before {
   content: "\f000";
@@ -267,4 +268,28 @@ i.i-checkbox-off:before {
 }
 i.i-redo:before {
   content: "\f055";
+}
+i.i-alt:before {
+  content: "\f056";
+}
+i.i-cmd:before {
+  content: "\f057";
+}
+i.i-shift:before {
+  content: "\f058";
+}
+i.i-info-circle:before {
+  content: "\f059";
+}
+i.i-caret-right:before {
+  content: "\f05a";
+}
+i.i-caret-left:before {
+  content: "\f05b";
+}
+i.i-caret-up:before {
+  content: "\f05c";
+}
+i.i-caret-down:before {
+  content: "\f05d";
 }
