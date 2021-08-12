@@ -16,7 +16,7 @@ echo "Generating 'line-16-light' Font File..."
 ./bin/makefont.js -u 800 -m src/unicode.json -i src/vector-files/line-16/light-svg -a 700 -y -130 -d dist/line-16-light
 
 echo "Generating 'line-24-bold' Font File..."
-./bin/makefont.js -u 1200 -m src/unicode.json -i src/vector-files/line-24/bold-svg -a 1050 -y -100 -d dist/line-24-bold
+./bin/makefont.js -u 1200 -m src/unicode.json -i src/vector-files/line-24/bold-svg -a 1100 -y -200 -d dist/line-24-bold
 
 echo "Generating 'legacy' Font File..."
 ./bin/makefont.js -u 90 -m src/unicode.json -i src/vector-files/legacy/svg -a 80 -y -13 -d dist/legacy

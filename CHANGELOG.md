@@ -3,6 +3,7 @@
  - add caret icons ( right, left, up, down ) in both `line-24-bold` and `line-16-light`
  - hide fallback font to prevent flash of emojis by setting font-display to `block`
  - upgrade modules
+ - tweak line-24-bold iconfont alignment and rebuild all fonts
 
 
 ## 0.1.5
