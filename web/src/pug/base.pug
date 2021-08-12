@@ -2,11 +2,11 @@
 doctype html
 html
   block vars
-  include /../../static/assets/lib/bootstrap.ldui/main/index.pug
+  include @/@loadingio/bootstrap.ext/dist/index.pug
   head
     block prehead
     +css("assets/lib/bootstrap/main/css/bootstrap.min.css")
-    +css("assets/lib/bootstrap.ldui/main/bootstrap.ldui.min.css")
+    +css("assets/lib/@loadingio/bootstrap.ext/main/index.min.css")
     +css("assets/lib/choosefont.js/main/choosefont.min.css")
     +css("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Mono")
     +css("assets/lib/ldcover/main/ldcv.min.css")
@@ -21,9 +21,9 @@ html
     block body
     +script("assets/lib/xfl/xfl.min.js")
     +script("assets/lib/choosefont.js/main/choosefont.min.js")
-    +script("assets/lib/bootstrap.native/main/bootstrap-native.min.js")
+    +script("assets/lib/bootstrap.native/main/bootstrap-native-v4.min.js")
     +script("assets/lib/bootstrap.ldui/main/bootstrap.ldui.min.js")
     +script("assets/lib/@loadingio/ldquery/main/ldq.min.js")
     +script("assets/lib/ldcover/main/ldcv.min.js")
-    +script("assets/lib/ldview/main/ldview.min.js")
+    +script("assets/lib/ldview/main/index.min.js")
     block script
