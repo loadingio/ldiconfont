@@ -26,39 +26,6 @@ i.ldif:before
   top: 0
 */
 /*@import '../gen/glyphs.styl'*/
-i.i-clone:before {
-  content: "\260a";
-}
-i.i-close:before {
-  content: "\260b";
-}
-i.i-creditcard:before {
-  content: "\260c";
-}
-i.i-drag:before {
-  content: "\2612";
-}
-i.i-eye-slash:before {
-  content: "\2613";
-}
-i.i-eye:before {
-  content: "\2614";
-}
-i.i-fb:before {
-  content: "\2615";
-}
-i.i-github:before {
-  content: "\2617";
-}
-i.i-google:before {
-  content: "\2618";
-}
-i.i-location:before {
-  content: "\261e";
-}
-i.i-twt:before {
-  content: "\262e";
-}
 i.i-heart:before {
   content: "\f000";
 }
@@ -175,4 +142,37 @@ i.i-play:before {
 }
 i.i-pause:before {
   content: "\f037";
+}
+i.i-clone:before {
+  content: "\f064";
+}
+i.i-close:before {
+  content: "\f065";
+}
+i.i-creditcard:before {
+  content: "\f067";
+}
+i.i-drag:before {
+  content: "\f068";
+}
+i.i-eye-slash:before {
+  content: "\f069";
+}
+i.i-eye:before {
+  content: "\f06a";
+}
+i.i-fb:before {
+  content: "\f06b";
+}
+i.i-github:before {
+  content: "\f06c";
+}
+i.i-google:before {
+  content: "\f06d";
+}
+i.i-location:before {
+  content: "\f06e";
+}
+i.i-twt:before {
+  content: "\f06f";
 }

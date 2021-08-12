@@ -1,0 +1,16 @@
+extends /base.pug
+block prehead
+  base(href="/")
+block head
+  +css("assets/lib/ldif/dev/line-24-bold/ldif.css")
+  //-+css("assets/lib/ldif/dev/line-16-light/ldif.css")
+  style(type="text/css"): :stylus
+    html, body
+      font-size: 24px
+block body
+  .w-1024.rwd.mx-auto.my-4
+    div: span hello #[i.i-comment]
+    div: span hello - 一 #[i.i-comment(style="transform:translate(0.5px,0px)")]
+    div: span hello - 一 #[i.i-file(style="transform:translate(0.5px,0px)")]
+    div: span hello - 一 #[i.i-trophy(style="transform:translate(0.25px,0px)")]
+  div(style="position:fixed;top:500px;left:500px"): i.i-trophy(style="transform:translate(0.25px,0px)")

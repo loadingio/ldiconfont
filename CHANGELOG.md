@@ -1,3 +1,9 @@
+## 0.1.7
+
+ - add icons: radiobox-semi / checkbox-semi / sad / heart-fill / star-fill
+ - check and update all current line-24 icons to make them pixel perfect.
+
+
 ## 0.1.6
 
  - add caret icons ( right, left, up, down ) in both `line-24-bold` and `line-16-light`

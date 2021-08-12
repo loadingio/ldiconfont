@@ -26,45 +26,6 @@ i.ldif:before
   top: 0
 */
 /*@import '../gen/glyphs.styl'*/
-i.i-bulb:before {
-  content: "\2607";
-}
-i.i-clone:before {
-  content: "\2616";
-}
-i.i-close:before {
-  content: "\2618";
-}
-i.i-comment:before {
-  content: "\261b";
-}
-i.i-creditcard:before {
-  content: "\261c";
-}
-i.i-drag:before {
-  content: "\2624";
-}
-i.i-eye-slash:before {
-  content: "\2626";
-}
-i.i-eye:before {
-  content: "\2627";
-}
-i.i-fb:before {
-  content: "\2628";
-}
-i.i-github:before {
-  content: "\262c";
-}
-i.i-google:before {
-  content: "\262d";
-}
-i.i-location:before {
-  content: "\2637";
-}
-i.i-twt:before {
-  content: "\2652";
-}
 i.i-heart:before {
   content: "\f000";
 }
@@ -292,4 +253,58 @@ i.i-caret-up:before {
 }
 i.i-caret-down:before {
   content: "\f05d";
+}
+i.i-sad:before {
+  content: "\f05e";
+}
+i.i-radiobox-semi:before {
+  content: "\f05f";
+}
+i.i-checkbox-semi:before {
+  content: "\f060";
+}
+i.i-heart-fill:before {
+  content: "\f061";
+}
+i.i-star-fill:before {
+  content: "\f062";
+}
+i.i-bulb:before {
+  content: "\f063";
+}
+i.i-clone:before {
+  content: "\f064";
+}
+i.i-close:before {
+  content: "\f065";
+}
+i.i-comment:before {
+  content: "\f066";
+}
+i.i-creditcard:before {
+  content: "\f067";
+}
+i.i-drag:before {
+  content: "\f068";
+}
+i.i-eye-slash:before {
+  content: "\f069";
+}
+i.i-eye:before {
+  content: "\f06a";
+}
+i.i-fb:before {
+  content: "\f06b";
+}
+i.i-github:before {
+  content: "\f06c";
+}
+i.i-google:before {
+  content: "\f06d";
+}
+i.i-location:before {
+  content: "\f06e";
+}
+i.i-twt:before {
+  content: "\f06f";
 }
