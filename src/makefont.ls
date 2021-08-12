@@ -41,7 +41,7 @@ argv = yargs
     type: \number
   .option \offset-y, do
     alias: \y
-    description: "adjust glyph vertical position. negative toward down, positive toward up. default -13"
+    description: "adjust glyph vertical position. negative toward down, positive toward up. default -130"
     type: \number
   .option \dir, do
     alias: \d

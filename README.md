@@ -45,7 +45,7 @@ run `./bin/makefont.js` to make a custom build. available parameters:
  - units-per-em ( -u ) - glyph size ( default 900 )
  - input ( -i ) - input directory of SVGs. file name of SVG will be its icon name.
  - ascent ( -a ) - ascent for tweaking icon vertical alignment. default 700
- - offset-y ( -y ) - ascent for tweaking icon vertical alignment. default -130
+ - offset-y ( -y ) - adjust glyph vertical position. negative toward down, positive toward up. default -130
  - dir ( -d ) - output directory. `dist` if omitted.
 
 Additionally, you can add a config.json under your input directory, `makefont` will parse and use it to config build automatically. Check `src/vector-files/line/svg/config.json` as an example.
