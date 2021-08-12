@@ -47,7 +47,7 @@ view = new ldview do
 
 choose = new ChooseFont do
   root: '.ldcv.ldcv-font .chooser'
-  meta-url: \/assets/lib/choosefont.js/main/fontinfo/meta.json
+  meta-url: \assets/lib/choosefont.js/main/fontinfo/meta.json
   base: "https://plotdb.github.io/xl-fontset/alpha"
 choose.on \choose, ->
   xfl.load it.path, {}, (font) ->
@@ -61,7 +61,7 @@ links = <[line-24-bold line-16-light]>.map (n) ->
   link = document.createElement \link
   link.setAttribute \rel, "stylesheet"
   link.setAttribute \type, "text/css"
-  link.setAttribute \href, "/assets/lib/ldif/dev/#n/ldif.css"
+  link.setAttribute \href, "assets/lib/ldif/dev/#n/ldif.css"
   {node: link, name: n}
 document.head.appendChild links.0.node
 view = new ldview do

@@ -116,7 +116,7 @@ view = new ldview({
 });
 choose = new ChooseFont({
   root: '.ldcv.ldcv-font .chooser',
-  metaUrl: '/assets/lib/choosefont.js/main/fontinfo/meta.json',
+  metaUrl: 'assets/lib/choosefont.js/main/fontinfo/meta.json',
   base: "https://plotdb.github.io/xl-fontset/alpha"
 });
 choose.on('choose', function(it){
@@ -132,7 +132,7 @@ links = ['line-24-bold', 'line-16-light'].map(function(n){
   link = document.createElement('link');
   link.setAttribute('rel', "stylesheet");
   link.setAttribute('type', "text/css");
-  link.setAttribute('href', "/assets/lib/ldif/dev/" + n + "/ldif.css");
+  link.setAttribute('href', "assets/lib/ldif/dev/" + n + "/ldif.css");
   return {
     node: link,
     name: n
