@@ -32,7 +32,7 @@ argv = yargs.option('map', {
   type: 'number'
 }).option('offset-y', {
   alias: 'y',
-  description: "adjust glyph vertical position. negative toward down, positive toward up. default -13",
+  description: "adjust glyph vertical position. negative toward down, positive toward up. default -130",
   type: 'number'
 }).option('dir', {
   alias: 'd',
