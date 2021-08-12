@@ -1,6 +1,6 @@
-ldcv = new ldCover do
+ldcv = new ldcover do
   root: '.ldcv'
-view = new ldView do
+view = new ldview do
   root: document.body
   action: click:
     "more-detail": -> ldcv.toggle(true)

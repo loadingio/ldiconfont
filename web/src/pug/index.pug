@@ -49,25 +49,3 @@ block body
 
 block script
   +script("js/index.js")
-  script: :lsc
-    links = <[line-24-bold line-16-light]>.map (n) ->
-      link = document.createElement \link
-      link.setAttribute \rel, "stylesheet"
-      link.setAttribute \type, "text/css"
-      link.setAttribute \href, "/assets/lib/ldif/dev/#n/ldif.css"
-      {node: link, name: n}
-    document.head.appendChild links.0.node
-
-    view = new ldView do
-      root: document.body
-      handler:
-        switch:
-          list: -> links
-          key: -> it.name
-          action: click: ({data}) ->
-            links.map -> if it.node.parentNode => it.node.parentNode.removeChild it.node
-            document.head.appendChild data.node
-            view.render!
-          text: ({node, data}) -> return data.name
-          handler: ({node, data}) -> node.classList.toggle \active, data.node.parentNode
-

@@ -476,10 +476,7 @@ pug_mixins["script"]("assets/lib/ldview/main/index.min.js");
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Ftkirby\u002Fworkspace\u002Fzbryikt\u002Floading\u002Fprojects\u002Fldif\u002Fweb\u002Fsrc\u002Fpug\u002Fbase.pug";
 ;pug_debug_line = 51;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_mixins["script"]("js/index.js");
-;pug_debug_line = 52;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "\u003Cscript\u003E";
-;pug_debug_line = 52;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "var links, view;\nlinks = ['line-24-bold', 'line-16-light'].map(function(n){\n  var link;\n  link = document.createElement('link');\n  link.setAttribute('rel', \"stylesheet\");\n  link.setAttribute('type', \"text\u002Fcss\");\n  link.setAttribute('href', \"\u002Fassets\u002Flib\u002Fldif\u002Fdev\u002F\" + n + \"\u002Fldif.css\");\n  return {\n    node: link,\n    name: n\n  };\n});\ndocument.head.appendChild(links[0].node);\nview = new ldView({\n  root: document.body,\n  handler: {\n    'switch': {\n      list: function(){\n        return links;\n      },\n      key: function(it){\n        return it.name;\n      },\n      action: {\n        click: function(arg$){\n          var data;\n          data = arg$.data;\n          links.map(function(it){\n            if (it.node.parentNode) {\n              return it.node.parentNode.removeChild(it.node);\n            }\n          });\n          document.head.appendChild(data.node);\n          return view.render();\n        }\n      },\n      text: function(arg$){\n        var node, data;\n        node = arg$.node, data = arg$.data;\n        return data.name;\n      },\n      handler: function(arg$){\n        var node, data;\n        node = arg$.node, data = arg$.data;\n        return node.classList.toggle('active', data.node.parentNode);\n      }\n    }\n  }\n});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+pug_html = pug_html + "\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "JSON" in locals_for_with ?
         locals_for_with.JSON :
         typeof JSON !== 'undefined' ? JSON : undefined, "b64img" in locals_for_with ?

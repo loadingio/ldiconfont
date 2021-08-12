@@ -1,6 +1,6 @@
 ldcv = do
-  view: new ldCover root: \.ldcv.ldcv-view
-  font: new ldCover root: \.ldcv.ldcv-font
+  view: new ldcover root: \.ldcv.ldcv-view
+  font: new ldcover root: \.ldcv.ldcv-font
 parse = (name) ->
   ld$.find(".ldcv.ldcv-view i").map (n,i) ->
     cls = n.getAttribute \class
@@ -11,7 +11,7 @@ parse = (name) ->
 
 ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
   .then (ldif) ->
-    view = new ldView do
+    view = new ldview do
       root: document.body
       handler:
         glyph: do
@@ -25,7 +25,7 @@ ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
             handler:
               icon: ({node,context}) -> node.classList.add "i-#{context.name}"
 
-view = new ldView do
+view = new ldview do
   root: \.ldcv.ldcv-view
   action: do
     change: do
@@ -56,3 +56,24 @@ choose.on \choose, ->
     ldcv.font.toggle false
 
 choose.init!
+
+links = <[line-24-bold line-16-light]>.map (n) ->
+  link = document.createElement \link
+  link.setAttribute \rel, "stylesheet"
+  link.setAttribute \type, "text/css"
+  link.setAttribute \href, "/assets/lib/ldif/dev/#n/ldif.css"
+  {node: link, name: n}
+document.head.appendChild links.0.node
+view = new ldview do
+  root: document.body
+  handler:
+    switch:
+      list: -> links
+      key: -> it.name
+      action: click: ({data}) ->
+        links.map -> if it.node.parentNode => it.node.parentNode.removeChild it.node
+        document.head.appendChild data.node
+        view.render!
+      text: ({node, data}) -> return data.name
+      handler: ({node, data}) -> node.classList.toggle \active, data.node.parentNode
+
