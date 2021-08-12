@@ -16,18 +16,31 @@ body {
   display: inline-block;
 }
 .glyphs {
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(7, minmax(64px, 1fr));
+  display: grid;
+  gap: 10px;
+  color: #39414c;
+}
+@media (max-width: 960px) {
+  .glyphs {
+    grid-template-columns: repeat(5, minmax(128px, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .glyphs {
+    grid-template-columns: repeat(3, minmax(128px, 1fr));
+  }
 }
 .glyphs .glyph {
   cursor: pointer;
-  margin: 14px 14px 36px;
-  width: 128px;
+  margin: 14px auto 36px;
+  width: 96px;
   flex: 0 0 auto;
   text-align: center;
 }
 .glyphs .glyph .name {
   font-size: 16px;
+  white-space: nowrap;
 }
 .glyphs .glyph .icon i {
   font-size: 45px;
@@ -44,4 +57,26 @@ body {
 i {
   display: inline-block;
   text-align: left;
+}
+.viewer {
+  font-family: Roboto;
+  font-size: 128px;
+}
+.viewer.active {
+  background: #ddd;
+}
+.viewer.active .inner {
+  background: #eee;
+}
+.viewer.active .inner i {
+  background: rgba(255,200,128,0.5);
+  outline: 1px solid #f00;
+}
+.viewer.active .inner i:before {
+  background: rgba(255,255,0,0.3);
+  outline: 1px solid #ff0;
+}
+.viewer.active .inner div {
+  background: rgba(128,200,255,0.5);
+  outline: 1px solid #09f;
 }

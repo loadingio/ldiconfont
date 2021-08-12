@@ -930,7 +930,7 @@ pug_mixins["script"]("assets/lib/@loadingio/ldquery/main/ldq.min.js");
 ;pug_debug_line = 27;pug_debug_filename = "\u002FUsers\u002Ftkirby\u002Fworkspace\u002Fzbryikt\u002Floading\u002Fprojects\u002Fldif\u002Fweb\u002Fsrc\u002Fpug\u002Fbase.pug";
 pug_mixins["script"]("assets/lib/ldcover/main/ldcv.min.js");
 ;pug_debug_line = 28;pug_debug_filename = "\u002FUsers\u002Ftkirby\u002Fworkspace\u002Fzbryikt\u002Floading\u002Fprojects\u002Fldif\u002Fweb\u002Fsrc\u002Fpug\u002Fbase.pug";
-pug_mixins["script"]("assets/lib/ldview/main/index.min.js");
+pug_mixins["script"]("assets/lib/ldview/main/index.js");
 ;pug_debug_line = 29;pug_debug_filename = "\u002FUsers\u002Ftkirby\u002Fworkspace\u002Fzbryikt\u002Floading\u002Fprojects\u002Fldif\u002Fweb\u002Fsrc\u002Fpug\u002Fbase.pug";
 pug_html = pug_html + "\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "JSON" in locals_for_with ?

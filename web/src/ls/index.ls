@@ -1,6 +1,11 @@
-ldcv = do
+<-(->it.apply {}) _
+
+ldcv =
   view: new ldcover root: \.ldcv.ldcv-view
   font: new ldcover root: \.ldcv.ldcv-font
+
+view = {}
+
 parse = (name) ->
   ld$.find(".ldcv.ldcv-view i").map (n,i) ->
     cls = n.getAttribute \class
@@ -11,7 +16,7 @@ parse = (name) ->
 
 ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
   .then (ldif) ->
-    view = new ldview do
+    view.glyphs = new ldview do
       root: document.body
       handler:
         glyph: do
@@ -25,25 +30,26 @@ ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
             handler:
               icon: ({node,context}) -> node.classList.add "i-#{context.name}"
 
-view = new ldview do
+view.ldcv = new ldview do
   root: \.ldcv.ldcv-view
   action: do
     change: do
-      fontfamily: ({node}) -> view.get("viewer").style.fontFamily = node.value
-      fontsize: ({node}) -> view.get("viewer").style.fontSize = "#{node.value}px"
-      iconname: ({node}) -> view.get("icon").setAttribute 'class', "i-#{node.value}"
-      iconsize: ({node}) -> view.get("icon").style.fontSize = "#{node.value}em"
-      verticaloffset: ({node}) -> view.get("icon").style <<< position: \relative, top: "#{node.value}px"
+      fontfamily: ({views, node}) -> views.0.get("viewer").style.fontFamily = node.value
+      fontsize: ({views, node}) -> views.0.get("viewer").style.fontSize = "#{node.value}px"
+      iconname: ({views, node}) ->
+        views.0.get("icon").setAttribute 'class', "i-#{node.value}"
+      iconsize: ({views, node}) -> views.0.get("icon").style.fontSize = "#{node.value}em"
+      verticaloffset: ({views, node}) -> views.0.get("icon").style <<< position: \relative, top: "#{node.value}px"
     click: do
       morefont: -> ldcv.font.toggle!
-      hint: ->
-        view.get("viewer").classList.toggle(\active)
-        view.get("hint-text").innerText = if view.get("viewer").classList.contains(\active) => "On" else "Off"
-      useflexbox: ->
-        view.get("inner").classList.toggle(\d-flex)
-        view.get("inner").classList.toggle(\align-items-center)
-        view.get("inner").classList.toggle(\justify-content-center)
-        view.get("flexbox-text").innerText = if view.get("inner").classList.contains(\d-flex) => "On" else "Off"
+      hint: ({views}) ->
+        views.0.get("viewer").classList.toggle(\active)
+        views.0.get("hint-text").innerText = if views.0.get("viewer").classList.contains(\active) => "On" else "Off"
+      useflexbox: ({views}) ->
+        views.0.get("inner").classList.toggle(\d-flex)
+        views.0.get("inner").classList.toggle(\align-items-center)
+        views.0.get("inner").classList.toggle(\justify-content-center)
+        views.0.get("flexbox-text").innerText = if views.0.get("inner").classList.contains(\d-flex) => "On" else "Off"
 
 choose = new ChooseFont do
   root: '.ldcv.ldcv-font .chooser'
@@ -52,7 +58,7 @@ choose = new ChooseFont do
 choose.on \choose, ->
   xfl.load it.path, {}, (font) ->
     font.sync 'Hga國一ば뮤'
-    view.get('viewer').style.fontFamily = it.name
+    view.ldcv.get('viewer').style.fontFamily = it.name
     ldcv.font.toggle false
 
 choose.init!
@@ -64,16 +70,16 @@ links = <[line-24-bold line-16-light]>.map (n) ->
   link.setAttribute \href, "assets/lib/ldif/dev/#n/ldif.css"
   {node: link, name: n}
 document.head.appendChild links.0.node
-view = new ldview do
+view.body = new ldview do
   root: document.body
   handler:
     switch:
       list: -> links
       key: -> it.name
-      action: click: ({data}) ->
+      action: click: ({views, data}) ->
         links.map -> if it.node.parentNode => it.node.parentNode.removeChild it.node
         document.head.appendChild data.node
-        view.render!
+        views.0.render!
       text: ({node, data}) -> return data.name
       handler: ({node, data}) -> node.classList.toggle \active, data.node.parentNode
 
