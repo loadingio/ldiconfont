@@ -21,8 +21,14 @@ echo "Generating 'line-24-bold' Font File..."
 echo "Generating 'legacy' Font File..."
 ./bin/makefont.js -u 90 -m src/unicode.json -i src/vector-files/legacy/svg -a 80 -y -13 -d dist/legacy
 
-echo "make 'line' the default icon set..."
+echo "Make 'line' the default icon set..."
 cp dist/line-24-bold/* dist
+
+echo "Generating woff2 counterparts..."
+cat dist/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/ldif.woff2
+cat dist/legacy/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/legacy/ldif.woff2
+cat dist/line-16-light/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/line-16-light/ldif.woff2
+cat dist/line-24-bold/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/line-24-bold/ldif.woff2
 
 echo "copy dist to dev web ..."
 rm -rf web/static/assets/lib/ldif/dev/

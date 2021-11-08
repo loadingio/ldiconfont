@@ -1,10 +1,17 @@
-## 0.1.7
+# Change Logs
+
+## v0.1.8
+
+ - add fonts in woff2 format
+
+
+## v0.1.7
 
  - add icons: radiobox-semi / checkbox-semi / sad / heart-fill / star-fill
  - check and update all current line-24 icons to make them pixel perfect.
 
 
-## 0.1.6
+## v0.1.6
 
  - add caret icons ( right, left, up, down ) in both `line-24-bold` and `line-16-light`
  - hide fallback font to prevent flash of emojis by setting font-display to `block`
@@ -12,35 +19,35 @@
  - tweak line-24-bold iconfont alignment and rebuild all fonts
 
 
-## 0.1.5
+## v0.1.5
 
  - rebuild icons
 
 
-## 0.1.4
+## v0.1.4
 
  - tweak `line-24-bold` upload icon alignment
  - add `info-circle` icon in `line-24-bold` and `line-16-light`
 
 
-## 0.1.3
+## v0.1.3
 
  - fix `line-16-light` icon bug ( icons don't match their names )
  - add style switcher in demo page
 
-## 0.1.2
+## v0.1.2
 
  - add icons for keys `shift`, `alt` and `cmd`.
 
 
-## 0.1.1
+## v0.1.1
 
  - upgrade packages including `template`, `fedep`, `livescript`.
  - rebuild dist with upgraded packages.
  - add demo link to `github` page.
 
 
-## 0.1.0 
+## v0.1.0 
 
 icon update:
 
