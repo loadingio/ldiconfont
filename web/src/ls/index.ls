@@ -7,7 +7,7 @@ ldcv =
 view = {}
 
 parse = (name) ->
-  ld$.find(".ldcv.ldcv-view i").map (n,i) ->
+  ld$.find(ldcv.view.root!, ".ldcv.ldcv-view i").map (n,i) ->
     cls = n.getAttribute \class
     cls = cls.replace(/i-\S+/g, '')
     n.setAttribute \class, cls
@@ -31,7 +31,7 @@ ld$.fetch "assets/lib/ldif/dev/ldif.json", {method: \GET}, {type: \json}
               icon: ({node,context}) -> node.classList.add "i-#{context.name}"
 
 view.ldcv = new ldview do
-  root: \.ldcv.ldcv-view
+  root: ldcv.view.root!
   action: do
     change: do
       fontfamily: ({views, node}) -> views.0.get("viewer").style.fontFamily = node.value
@@ -52,8 +52,8 @@ view.ldcv = new ldview do
         views.0.get("flexbox-text").innerText = if views.0.get("inner").classList.contains(\d-flex) => "On" else "Off"
 
 choose = new ChooseFont do
-  root: '.ldcv.ldcv-font .chooser'
-  meta-url: \assets/lib/choosefont.js/main/fontinfo/meta.json
+  root: ld$.find(ldcv.font.root!, '.chooser', 0) #'.ldcv.ldcv-font .chooser'
+  meta-url: \assets/lib/choosefont.js/main/dist/fontinfo/meta.json
   base: "https://plotdb.github.io/xl-fontset/alpha"
 choose.on \choose, ->
   xfl.load it.path, {}, (font) ->

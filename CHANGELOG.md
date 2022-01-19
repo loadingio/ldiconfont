@@ -1,5 +1,13 @@
 # Change Logs
 
+## v0.1.9
+
+ - upgrade modules
+ - release with compact directory structure
+ - add `style` in `package.json`
+ - patch test code to make it work with upgraded modules
+
+
 ## v0.1.8
 
  - add fonts in woff2 format

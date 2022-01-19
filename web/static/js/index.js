@@ -12,7 +12,7 @@
   };
   view = {};
   parse = function(name){
-    ld$.find(".ldcv.ldcv-view i").map(function(n, i){
+    ld$.find(ldcv.view.root(), ".ldcv.ldcv-view i").map(function(n, i){
       var cls;
       cls = n.getAttribute('class');
       cls = cls.replace(/i-\S+/g, '');
@@ -71,7 +71,7 @@
     });
   });
   view.ldcv = new ldview({
-    root: '.ldcv.ldcv-view',
+    root: ldcv.view.root(),
     action: {
       change: {
         fontfamily: function(arg$){
@@ -122,8 +122,8 @@
     }
   });
   choose = new ChooseFont({
-    root: '.ldcv.ldcv-font .chooser',
-    metaUrl: 'assets/lib/choosefont.js/main/fontinfo/meta.json',
+    root: ld$.find(ldcv.font.root(), '.chooser', 0),
+    metaUrl: 'assets/lib/choosefont.js/main/dist/fontinfo/meta.json',
     base: "https://plotdb.github.io/xl-fontset/alpha"
   });
   choose.on('choose', function(it){

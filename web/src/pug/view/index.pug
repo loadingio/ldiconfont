@@ -67,11 +67,11 @@ block body
             .btn.btn-lg.btn-block.btn-outline-dark(data-ldcv-set="") Close Popup
 
 block script
-  script: :lsc
-    ldcv = new ldCover do
+  script(type="module"): :lsc
+    ldcv = new ldcover do
       root: \.ldcv
     ldcv.toggle!
-    view = new ldView do
+    view = new ldview do
       root: \.ldcv
       action: do
         change: do
