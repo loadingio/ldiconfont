@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.1.10
+
+ - republish to add missing files
+
+
 ## v0.1.9
 
  - upgrade modules
