@@ -259,7 +259,7 @@ pug_mixins["css"]("assets/lib/ldcover/main/index.min.css");
 pug_mixins["css"]("css/index.css");
 ;pug_debug_line = 18;pug_debug_filename = "\u002FUsers\u002Ftkirby\u002Fworkspace\u002Fzbryikt\u002Floading\u002Fprojects\u002Fldif\u002Fweb\u002Fsrc\u002Fpug\u002Fbase.pug";
 ;pug_debug_line = 5;pug_debug_filename = "src\u002Fpug\u002Fgithub\u002Findex.pug";
-pug_mixins["css"]("assets/lib/ldif/dev/ldif.css");
+pug_mixins["css"]("assets/lib/ldif/dev/index.min.css");
 ;pug_debug_line = 6;pug_debug_filename = "src\u002Fpug\u002Fgithub\u002Findex.pug";
 pug_html = pug_html + "\u003Cstyle type=\"text\u002Fcss\"\u003E";
 ;pug_debug_line = 6;pug_debug_filename = "src\u002Fpug\u002Fgithub\u002Findex.pug";

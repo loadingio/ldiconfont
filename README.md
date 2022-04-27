@@ -7,7 +7,7 @@ Build icon font with SVGs, along with a pixel-perfect line icon set in 24x24 / 1
 
 ## Usage
 
-include ldif.min.css file and specify font url ( if font file is not in the same directory of css file ):
+include ldif.min.css file and specify font url:
 
     <link rel="stylesheet" type="text/css" href="ldif.min.css"/>
     <style type="text/css">

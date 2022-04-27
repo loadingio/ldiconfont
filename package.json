@@ -12,7 +12,7 @@
     "bin"
   ],
   "description": "iconfont dedicated for loading.io",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "homepage": "https://github.com/loadingio/ldiconfont",
   "repository": {
     "type": "git",

@@ -1,5 +1,11 @@
 # Change Logs
 
+## v0.2.0
+
+ - don't specify `src` by default in ldi font-face since it's usually in other path.
+ - add bundled `index.min.css` to simplify icon font loading
+
+
 ## v0.1.10
 
  - republish to add missing files

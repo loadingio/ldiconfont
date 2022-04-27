@@ -67,7 +67,7 @@ links = <[line-24-bold line-16-light]>.map (n) ->
   link = document.createElement \link
   link.setAttribute \rel, "stylesheet"
   link.setAttribute \type, "text/css"
-  link.setAttribute \href, "assets/lib/ldif/dev/#n/ldif.css"
+  link.setAttribute \href, "assets/lib/ldif/dev/#n/index.min.css"
   {node: link, name: n}
 document.head.appendChild links.0.node
 view.body = new ldview do

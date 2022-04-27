@@ -139,7 +139,7 @@
     link = document.createElement('link');
     link.setAttribute('rel', "stylesheet");
     link.setAttribute('type', "text/css");
-    link.setAttribute('href', "assets/lib/ldif/dev/" + n + "/ldif.css");
+    link.setAttribute('href', "assets/lib/ldif/dev/" + n + "/index.min.css");
     return {
       node: link,
       name: n

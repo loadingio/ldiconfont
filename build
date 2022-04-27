@@ -2,11 +2,15 @@
 rm -rf dist
 mkdir -p dist
 mkdir -p bin
-rm -f bin/makefont.js bin/server.js
+rm -f bin/makefont.js bin/server.js bin/bundle.js
 echo "build src/makefont.ls -> bin/makefont.js"
 echo "#!/usr/bin/env node" > bin/makefont.js
 ./node_modules/.bin/lsc -cpb src/makefont.ls >> bin/makefont.js
 chmod 755 bin/makefont.js
+echo "build src/bundle.ls -> bin/bundle.js"
+echo "#!/usr/bin/env node" > bin/bundle.js
+./node_modules/.bin/lsc -cpb src/bundle.ls >> bin/bundle.js
+chmod 755 bin/bundle.js
 echo "build src/server.ls -> bin/server.js"
 echo "#!/usr/bin/env node" > bin/server.js
 ./node_modules/.bin/lsc -cpb src/server.ls >> bin/server.js
@@ -29,6 +33,9 @@ cat dist/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/ldif.woff2
 cat dist/legacy/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/legacy/ldif.woff2
 cat dist/line-16-light/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/line-16-light/ldif.woff2
 cat dist/line-24-bold/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/line-24-bold/ldif.woff2
+
+echo "bundle font with css ..."
+./bin/bundle.js
 
 echo "copy dist to dev web ..."
 rm -rf web/static/assets/lib/ldif/dev/
