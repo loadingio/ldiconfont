@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.1
+
+ - add icon for `globe`
+
+
 ## v0.2.0
 
  - don't specify `src` by default in ldi font-face since it's usually in other path.
