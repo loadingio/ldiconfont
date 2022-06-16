@@ -10,7 +10,7 @@ path = require('path');
 svg2ttf = require('svg2ttf');
 jsdom = require('jsdom');
 progress = require('progress');
-colors = require('colors');
+colors = require('@plotdb/colors');
 svgo = require('svgo');
 yargs = require('yargs');
 ref$ = [-13, 70], offsetY = ref$[0], ascent = ref$[1];

@@ -307,3 +307,6 @@ i.i-location:before {
 i.i-twt:before {
   content: "\f06f";
 }
+i.i-globe:before {
+  content: "\f070";
+}

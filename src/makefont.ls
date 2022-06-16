@@ -1,5 +1,5 @@
 console.log "initializing..."
-require! <[fs fs-extra stylus uglifycss path svg2ttf jsdom progress colors svgo yargs]>
+require! <[fs fs-extra stylus uglifycss path svg2ttf jsdom progress @plotdb/colors svgo yargs]>
 
 # ascent - tweak box vertical position based on accompany font family
 # offset-y - adjust vertical position. negative toward 'down', positive toward 'up'
