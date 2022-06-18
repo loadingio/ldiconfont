@@ -4,7 +4,6 @@
   font-style: normal;
   font-display: block;
 /* this shold be overwritten by users to point to correct path */
-  src: url("ldif.ttf") format('truetype');
 }
 i {
 /* use !important to prevent issues with browser extensions that change fonts */
@@ -307,4 +306,7 @@ i.i-location:before {
 }
 i.i-twt:before {
   content: "\f06f";
+}
+i.i-globe:before {
+  content: "\f070";
 }
