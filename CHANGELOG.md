@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.2
+
+ - add icons for `spreadsheet`, `question` and `discuss` in `line-24-bold` and `line-16-light`.
+
+
 ## v0.2.1
 
  - add icon for `globe`
