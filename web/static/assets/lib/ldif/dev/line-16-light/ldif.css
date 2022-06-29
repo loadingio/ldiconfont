@@ -310,3 +310,12 @@ i.i-twt:before {
 i.i-globe:before {
   content: "\f070";
 }
+i.i-spreadsheet:before {
+  content: "\f071";
+}
+i.i-question:before {
+  content: "\f072";
+}
+i.i-discuss:before {
+  content: "\f073";
+}

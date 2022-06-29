@@ -100,5 +100,8 @@
   "google": "f06d",
   "location": "f06e",
   "twt": "f06f",
-  "globe": "f070"
+  "globe": "f070",
+  "spreadsheet": "f071",
+  "question": "f072",
+  "discuss": "f073"
 }
