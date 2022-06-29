@@ -73,9 +73,6 @@ i.i-circle:before {
 i.i-radio:before {
   content: "\f00f";
 }
-i.i-question:before {
-  content: "\f010";
-}
 i.i-lock:before {
   content: "\f011";
 }
@@ -174,4 +171,7 @@ i.i-location:before {
 }
 i.i-twt:before {
   content: "\f06f";
+}
+i.i-question:before {
+  content: "\f072";
 }
