@@ -1,5 +1,11 @@
 # Change Logs
 
+## v0.2.3 (upcoming)
+
+ - upgrade `jsdom` from `15.0.0` to `20.0.0`
+ - rebuild after module upgrade
+
+
 ## v0.2.2
 
  - add icons for `spreadsheet`, `question` and `discuss` in `line-24-bold` and `line-16-light`.

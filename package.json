@@ -37,7 +37,7 @@
     "@plotdb/colors": "^0.0.1",
     "fedep": "^1.1.2",
     "fs-extra": "^8.0.0",
-    "jsdom": "^15.0.0",
+    "jsdom": "^20.0.0",
     "ldcover": "^3.0.1",
     "ldview": "1.0.0",
     "livescript": "^1.6.0",
