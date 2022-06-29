@@ -63,11 +63,6 @@ offsetY = argv.y != null
 map = mapfile
   ? JSON.parse(fs.readFileSync(mapfile).toString())
   : {};
-svgo = new svgo({
-  plugins: [{
-    convertShapeToPath: true
-  }]
-});
 progressBar = function(total, text){
   var bar;
   total == null && (total = 10);
@@ -80,8 +75,11 @@ progressBar = function(total, text){
   return bar;
 };
 optimize = function(d, i, code){
-  return svgo.optimize(code).then(function(ret){
-    var dom, path, e;
+  return Promise.resolve().then(function(){
+    var ret, dom, path, e;
+    ret = svgo.optimize(code, {
+      convertShapeToPath: true
+    });
     dom = new jsdom.JSDOM(ret.data).window.document;
     try {
       path = dom.querySelector("path").getAttribute("d");

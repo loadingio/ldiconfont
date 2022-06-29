@@ -69,8 +69,6 @@ offset-y = if argv.y? => +argv.y else if offset-y? => offset-y else -130
 
 map = if mapfile => JSON.parse(fs.read-file-sync mapfile .toString!) else {}
 
-svgo = new svgo({plugins: [{convertShapeToPath: true}]})
-
 progress-bar = (total = 10, text = "converting") ->
   bar = new progress(
     "   #text [#{':bar'.yellow}] #{':percent'.cyan} :etas",
@@ -79,8 +77,9 @@ progress-bar = (total = 10, text = "converting") ->
   return bar
 
 optimize = (d, i, code) ->
-  svgo.optimize code
-    .then (ret) ->
+  Promise.resolve!
+    .then ->
+      ret = svgo.optimize code, {convertShapeToPath: true}
       dom = new jsdom.JSDOM(ret.data).window.document
       try
         path = dom.querySelector("path").getAttribute("d")

@@ -3,6 +3,7 @@
 ## v0.2.3 (upcoming)
 
  - upgrade `jsdom` from `15.0.0` to `20.0.0`
+ - upgrade `svgo` from `1.2.2` to `2.8.0'
  - rebuild after module upgrade
 
 
