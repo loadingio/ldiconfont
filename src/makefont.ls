@@ -39,6 +39,10 @@ argv = yargs
     alias: \a
     description: "ascent. tweak box vertical position based on desired font family. negative toward down, postive toward up. default 700"
     type: \number
+  .option \descent, do
+    alias: \e
+    description: "descent. tweak box vertical position based on desired font family. negative toward down, postive toward up. default 700"
+    type: \number
   .option \offset-y, do
     alias: \y
     description: "adjust glyph vertical position. negative toward down, positive toward up. default -130"
@@ -60,12 +64,19 @@ srcdir = argv.i or 'src/svg'
 if fs.exists-sync path.join(srcdir, 'config.json') => 
   config = JSON.parse(fs.read-file-sync path.join(srcdir, 'config.json') .toString!)
   ascent = config["ascent"]
+  descent = config["descent"]
   offset-y = config["offset-y"]
   size = config["units-per-em"]
 
 size = argv.u or size or 900
-ascent = if argv.a? => +argv.a else if ascent? => ascent else 700
-offset-y = if argv.y? => +argv.y else if offset-y? => offset-y else -130
+ascent = if argv.a? => +argv.a else if ascent? => ascent else 800
+descent = if argv.e? => +argv.e else if descent? => descent else 100
+offset-y = if argv.y? => +argv.y else if offset-y? => offset-y else -100
+
+# size: the size of grid
+# ascent: baseline to topmost
+# descent: baseline to bottommost
+# offset-y: for aligning between different fonts. ( try `-descent` if possible )
 
 map = if mapfile => JSON.parse(fs.read-file-sync mapfile .toString!) else {}
 
@@ -157,7 +168,7 @@ handle svgs
     <svg xmlns="http://www.w3.org/2000/svg">
     <defs>
     <font id="ldi">
-      <font-face units-per-em="#{size}" ascent="#ascent" descent="#{size - ascent}"/>
+      <font-face units-per-em="#{size}" ascent="#ascent" descent="#{descent}"/>
       <missing-glyph horiz-adv-x="#{size}"/>
       #glyph-tags
     </font>

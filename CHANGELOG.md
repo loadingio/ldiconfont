@@ -1,10 +1,11 @@
 # Change Logs
 
-## v0.2.3 (upcoming)
+## v0.2.3
 
  - upgrade `jsdom` from `15.0.0` to `20.0.0`
  - upgrade `svgo` from `1.2.2` to `2.8.0'
  - rebuild after module upgrade
+ - add `descent` config and tweak all fonts for better alignment
 
 
 ## v0.2.2
