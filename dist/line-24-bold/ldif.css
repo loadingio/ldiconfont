@@ -319,3 +319,6 @@ i.i-question:before {
 i.i-discuss:before {
   content: "\f073";
 }
+i.i-qrcode:before {
+  content: "\f074";
+}

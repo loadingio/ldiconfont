@@ -1,5 +1,11 @@
 # Change Logs
 
+## v0.2.4
+
+ - upgrade modules for vulnerabilities fixing
+ - add `qrcode` icon
+
+
 ## v0.2.3
 
  - upgrade `jsdom` from `15.0.0` to `20.0.0`
