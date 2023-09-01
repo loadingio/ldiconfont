@@ -322,3 +322,6 @@ i.i-discuss:before {
 i.i-qrcode:before {
   content: "\f074";
 }
+i.i-new-page:before {
+  content: "\f075";
+}

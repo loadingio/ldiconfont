@@ -1,5 +1,11 @@
 # Change Logs
 
+## v0.2.5
+
+ - audit fix for vulnerabilities fixing
+ - add `new-page` icon
+
+
 ## v0.2.4
 
  - upgrade modules for vulnerabilities fixing
