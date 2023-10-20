@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.6
+
+ - add `paste` icon
+
+
 ## v0.2.5
 
  - audit fix for vulnerabilities fixing

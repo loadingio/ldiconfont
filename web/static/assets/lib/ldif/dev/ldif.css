@@ -325,3 +325,6 @@ i.i-qrcode:before {
 i.i-new-page:before {
   content: "\f075";
 }
+i.i-paste:before {
+  content: "\f076";
+}
