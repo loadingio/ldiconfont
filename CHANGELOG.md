@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.7
+
+ - tweak lock / unlock icon
+
+
 ## v0.2.6
 
  - add `paste` icon
