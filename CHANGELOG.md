@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.8
+
+ - add alignment icons
+
+
 ## v0.2.7
 
  - tweak lock / unlock icon

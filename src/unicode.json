@@ -106,5 +106,9 @@
   "discuss": "f073",
   "qrcode": "f074",
   "new-page": "f075",
-  "paste": "f076"
+  "paste": "f076",
+  "align-left": "f077",
+  "align-right": "f078",
+  "align-center": "f079",
+  "align-justify": "f07a"
 }

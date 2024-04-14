@@ -328,3 +328,15 @@ i.i-new-page:before {
 i.i-paste:before {
   content: "\f076";
 }
+i.i-align-left:before {
+  content: "\f077";
+}
+i.i-align-right:before {
+  content: "\f078";
+}
+i.i-align-center:before {
+  content: "\f079";
+}
+i.i-align-justify:before {
+  content: "\f07a";
+}
