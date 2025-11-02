@@ -1,3 +1,4 @@
 icons to be added
- - arrow ( multiple directions )
+ - arrow ( multiple directions ) **
  - ellipsis
+ - pie chart, bar chart
