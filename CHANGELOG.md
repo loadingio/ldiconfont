@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.9 (upcoming)
+
+ - add mobile and tablet icons
+
+
 ## v0.2.8
 
  - add alignment icons
