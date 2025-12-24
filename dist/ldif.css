@@ -340,3 +340,9 @@ i.i-align-center:before {
 i.i-align-justify:before {
   content: "\f07a";
 }
+i.i-mobile:before {
+  content: "\f07b";
+}
+i.i-tablet:before {
+  content: "\f07c";
+}
