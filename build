@@ -16,17 +16,24 @@ echo "#!/usr/bin/env node" > bin/server.js
 ./node_modules/.bin/lsc -cpb src/server.ls >> bin/server.js
 chmod 755 bin/server.js
 
+
+echo "Optimize 'line-16-light' SVG Files..."
+npx svgo -q -f src/vector-files/line-16/light-svg/ -o dist/line-16-light/svg
 echo "Generating 'line-16-light' Font File..."
-./bin/makefont.js -u 800 -m src/unicode.json -i src/vector-files/line-16/light-svg -a 700 -y -100 -e 100 -d dist/line-16-light
+./bin/makefont.js -u 800 -m src/unicode.json -i dist/line-16-light/svg -a 700 -y -100 -e 100 -d dist/line-16-light
 
+echo "Optimize 'line-24-bold' SVG Files..."
+npx svgo -q -f src/vector-files/line-24/bold-svg/ -o dist/line-24-bold/svg
 echo "Generating 'line-24-bold' Font File..."
-./bin/makefont.js -u 1200 -m src/unicode.json -i src/vector-files/line-24/bold-svg -a 1050 -y -150 -e 150 -d dist/line-24-bold
+./bin/makefont.js -u 1200 -m src/unicode.json -i dist/line-24-bold/svg -a 1050 -y -150 -e 150 -d dist/line-24-bold
 
+echo "Optimize 'legacy' SVG Files..."
+npx svgo -q -f src/vector-files/legacy/svg/ -o dist/legacy/svg
 echo "Generating 'legacy' Font File..."
-./bin/makefont.js -u 90 -m src/unicode.json -i src/vector-files/legacy/svg -a 80 -y -10 -e 10 -d dist/legacy
+./bin/makefont.js -u 90 -m src/unicode.json -i dist/legacy/svg -a 80 -y -10 -e 10 -d dist/legacy
 
 echo "Make 'line' the default icon set..."
-cp dist/line-24-bold/* dist
+cp -R dist/line-24-bold/* dist
 
 echo "Generating woff2 counterparts..."
 cat dist/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/ldif.woff2
