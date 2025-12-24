@@ -44,7 +44,7 @@
     "progress": "^2.0.3",
     "stylus": "^0.55.0",
     "svg2ttf": "^6.0.2",
-    "svgo": "^2.8.0",
+    "svgo": "^4.0.0",
     "@zbryikt/template": "^2.3.45",
     "ttf2woff2": "^4.0.4",
     "uglifycss": "^0.0.29",
