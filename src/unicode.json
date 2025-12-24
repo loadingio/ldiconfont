@@ -110,5 +110,7 @@
   "align-left": "f077",
   "align-right": "f078",
   "align-center": "f079",
-  "align-justify": "f07a"
+  "align-justify": "f07a",
+  "mobile": "f07b",
+  "tablet": "f07c"
 }
