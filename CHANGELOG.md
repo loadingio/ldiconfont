@@ -1,6 +1,6 @@
 # Change Logs
 
-## v0.2.9 (upcoming)
+## v0.2.9
 
  - add mobile and tablet icons
 
