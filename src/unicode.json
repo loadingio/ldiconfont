@@ -112,5 +112,7 @@
   "align-center": "f079",
   "align-justify": "f07a",
   "mobile": "f07b",
-  "tablet": "f07c"
+  "tablet": "f07c",
+  "checklist": "f07d",
+  "list": "f07e"
 }
