@@ -17,6 +17,12 @@ echo "#!/usr/bin/env node" > bin/server.js
 chmod 755 bin/server.js
 
 
+echo "Optimize 'claude-24-light' SVG Files..."
+npx svgo -q -f src/vector-files/claude-24/light-svg/ -o dist/claude-24-light/svg
+echo "Generating 'claude-24-light' Font File..."
+#./bin/makefont.js -u 24 -m src/unicode.json -i dist/claude-24-light/svg -a 21 -y -3 -e 3 -d dist/claude-24-light
+./bin/makefont.js -u 1200 -m src/unicode.json -i dist/claude-24-light/svg -a 1050 -y -150 -e 150 -d dist/claude-24-light
+
 echo "Optimize 'line-16-light' SVG Files..."
 npx svgo -q -f src/vector-files/line-16/light-svg/ -o dist/line-16-light/svg
 echo "Generating 'line-16-light' Font File..."
@@ -38,6 +44,7 @@ cp -R dist/line-24-bold/* dist
 echo "Generating woff2 counterparts..."
 cat dist/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/ldif.woff2
 cat dist/legacy/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/legacy/ldif.woff2
+cat dist/claude-24-light/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/claude-24-light/ldif.woff2
 cat dist/line-16-light/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/line-16-light/ldif.woff2
 cat dist/line-24-bold/ldif.ttf | ./node_modules/.bin/ttf2woff2 > dist/line-24-bold/ldif.woff2
 
