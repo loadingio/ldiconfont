@@ -63,7 +63,7 @@ choose.on \choose, ->
 
 choose.init!
 
-links = <[line-24-bold line-16-light]>.map (n) ->
+links = <[line-24-bold line-16-light claude-24-light legacy]>.map (n) ->
   link = document.createElement \link
   link.setAttribute \rel, "stylesheet"
   link.setAttribute \type, "text/css"
