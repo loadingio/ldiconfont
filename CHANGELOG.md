@@ -1,6 +1,6 @@
 # Change Logs
 
-## v0.2.10 (upcoming)
+## v0.2.10
 
  - add checklist and list icons
 
