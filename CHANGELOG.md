@@ -1,5 +1,10 @@
 # Change Logs
 
+## v0.2.10
+
+ - add checklist and list icons
+
+
 ## v0.2.9
 
  - add mobile and tablet icons

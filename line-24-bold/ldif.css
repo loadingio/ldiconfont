@@ -346,3 +346,9 @@ i.i-mobile:before {
 i.i-tablet:before {
   content: "\f07c";
 }
+i.i-checklist:before {
+  content: "\f07d";
+}
+i.i-list:before {
+  content: "\f07e";
+}
