@@ -1,5 +1,11 @@
 # Change Logs
 
+## v0.3.0
+
+ - use `index.min.css` as entry style, which embed font with dataurl inside
+ - add an `index.css` counterpart for consistency which is the same with `index.min.css`
+
+
 ## v0.2.10
 
  - add checklist and list icons

@@ -12,6 +12,7 @@ recurse = function(root){
     css = fs.readFileSync(cssFile).toString();
     css += "@font-face{font-family:'ldi';src:url(data:font/woff2;base64," + b64 + ") format('woff2')}";
     fs.writeFileSync(path.join(root, "index.min.css"), css);
+    fs.writeFileSync(path.join(root, "index.css"), css);
   }
   files = fs.readdirSync(root).map(function(it){
     return path.join(root, it);
